@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+/*ヘッダーロゴサイズ*/
+/*左　会社名　の幅（最大）*/
+#header .sitetitle img{
+	/*
+	max-width: 220px !important;
+	*/
+}
+/*中央　ロゴの幅（最大）*/
+#header .sitelogo img{
+	/*
+	max-width: 95px !important;
+	*/
+}
+
+/*サイト設定*/
+
+
+
+/*ボタン基本色　「一覧をみる」など*/
+.btn a,
+.entry-content .btn a{
+	/*
+	background-color: #ccc !important;
+	color: #fff !important;
+	*/
+}
+
+/*ボタン基本色　「もっと見る」など*/
+
+.posts .post .todetail a[rel="bookmark"],
+.posts .post .todetail[rel="bookmark"]
+{
+	/*
+	background-color: #80BA1A !important;
+	color: #fff !important;
+	border:1px solid #000 !important;
+	*/
+}
+.posts .post .todetail a[rel="bookmark"]::after,
+.posts .post .todetail[rel="bookmark"]::after
+{
+	/*
+	color: #fff !important;
+	*/
+}
+
+
+
+/*タイトルリボン　トップページ「新築注文住宅施工事例」など　基本色設定　他の箇所にも反映されます*/
+.ttl_ribbon,
+.entry-content .ttl_ribbon{
+	/*
+	background: #E49A0F none !important;
+	color: #fff !important;
+	*/
+}
+
+
+
+/*HOME 施工事例*/
+/*「詳細はこちら」ボタン*/
+.posts .post.style-example .title .todetail a{
+	/*
+	background: #80BA1A !important;
+	color: #fff !important;
+	*/
+}
+#home-example .btn.toindex a{
+	/*
+	background: #80BA1A !important;
+	color: #fff !important;
+	*/
+}
+
+/*ヘッドライン表示　リンク色*/
+.posts .post.style-headline .title a{
+	/*
+	color: #B56B31 !important;
+	*/
+}
+
+/*HOME NWES&TOPICS */
+	/*背景色*/
+#home-infoarea > .wrapper{
+	/*
+	background: #ECF5DC !important;
+	*/
+}
+	/*一覧ボタン*/
+#home-infoarea .btn.arrow.toindex a{
+	/*
+	background: #80BA1A !important;
+	color: #fff !important;
+	*/
+}
+
+/*HOME NWES&TOPICS EVENTS post背景色*/
+#home-event .posts .post.style-event{
+	/*
+	background: #ccc !important;
+	*/
+}
+
+
+
+/*HOME VOICE*/
+/*post VOICE背景色*/
+#home-voice .posts .post.style-voice::before {
+	/*
+	background-color: #80BA1A !important;
+	*/
+}
+/*一覧ボタン*/
+#home-voice .btn.arrow.toindex a{
+	/*
+	background: #80BA1A !important;
+	color: #fff !important;
+	*/
+}
+
+
+/*HOME 挨拶　スタッフ*/
+/*HOME 社長「READMORE」背景色*/
+#home-greeting #president a .readmore{
+	/*
+	background: #80BA1A !important;
+	*/
+}
+/*HOME スタッフ一覧ボタン*/
+#home-staff .btn.arrow.toindex a{
+	/*
+	background: #80BA1A !important;
+	color: #fff !important;
+	*/
+}
+
+
+/*HOME BLOG*/
+
+
+/*CONTACT US*/
+	/*ふち色太さ*/
+.contact,
+.include-contact > .inbox{
+/*
+	border: 10px solid #DDECC1 !important;
+*/
+}
+	/*ボタン色*/
+.inc_contact-btn .btn.to_shiryou a{
+	/*
+	background-color: #E49A0F !important;
+	*/
+}
+.inc_contact-btn .btn.to_inquiry a{
+	/*
+	background-color: #4E3328 !important;
+	*/
+}
+/*ハンバーガーメニュー　色*/
+/*CLOSE*/
+/*
+#wrapper .btn-gnavi span{
+	background: #E49A0F !important;
+}
+.btn-gnavi-menu{
+	color: #E49A0F !important;
+}
+*/
+/*OPEN*/
+/*
+#wrapper .btn-gnavi.open span{
+	background: #80BA1A !important;
+}
+#wrapper .btn-gnavi.open .btn-gnavi-menu{
+	color: #80BA1A !important;
+}
+*/
+
+/*ハンバーガーボタン押したときの全画面メニュー背景色*/
+#wrapper #global-navi{
+	/*
+	background-color: rgba(95, 64, 29, 0.95) !important;
+	*/
+}
+/*全画面メニュー ボタン色*/
+.inc_contact-btn .btn a{
+/*
+	background: #C9A063 !important;
+	color: #fff;
+*/
+}
+
+
+
+/*ABOUT 会社案内ページ*/
+/*ページ上部　振り分け　項目の枠色*/
+#about-filter li{
+/*
+	border-color:#eee !important;
+*/
+}
+
+/*ページ上部　振り分け　項目のタイトル*/
+#about-filter li .title{
+	/*
+	background: #80BA1A !important;
+	color: #fff !important;
+	*/
+}
+/*ページ上部　マウスオーバー時の背景色*/
+#about-filter li::before{
+/*	
+	background: #80BA1A  !important;
+*/
+} 
+/*ページ上部　マウスオーバー時の背景色の不透明度調整　0.1～0.9　*/
+#about-filter li:hover::before{
+/*
+opacity: 0.1  !important;
+*/
+} 
+
+/*会社概要　テーブル　th（タイトルセルの色）*/
+#gaiyou th{
+	/*
+background: #ECF5DC !important;
+	*/
+}
+
+
