@@ -28,8 +28,15 @@ jQuery(function($){
         });
     });
 });
-</script>
 
+/*.posts .post*/
+jQuery(function($){
+$('.posts .post.style-event').addClass('my-3 col-md-6 '); 
+$('.posts .post.style-inc_news .thumbnail').addClass('py-0 ');
+$('#home-blog .posts .post').addClass('col-sm-6 col-md-4 col-12');
+$('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4'); 
+});		
+</script>
 <div id="home-slider" class="mx-fit">
   <?php get_template_part('hublogslider'); ?>
 </div>
@@ -133,14 +140,7 @@ jQuery(function($){
 <!--　home-example　▲▲▲施工事例▲▲▲--> 
 
 <!--▼▼▼インフォエリア▼▼▼-->
-<div id="home-infoarea" class=" wrapper container mx-auto px-0 mb-5 "> 
-  <script>
-jQuery(function($){
-$('.posts .post.style-event').addClass('my-3 col-md-6 '); 
-$('.posts .post.style-inc_news .thumbnail').addClass('py-0 ');
-$('#home-blog .posts .post').addClass('col-sm-6 col-md-4 col-12'); 
-});		
-</script>
+<div id="home-infoarea" class=" wrapper container mx-auto px-0 mb-5 ">
   <section id="home-news" class="home-content pt-5 pb-4 mb-4 mb-md-5 px-0 px-md-3 mx-auto">
   <header class="content_header text-sm-center mb-3 mb-md-4">
       <h2 class="ttl mincho">ニュース<span class="txt-s">＆</span>トピックス</h2>
@@ -210,7 +210,7 @@ $('#home-blog .posts .post').addClass('col-sm-6 col-md-4 col-12');
     $the_query = new WP_Query( $args );
     if ( $the_query->have_posts() ):
       ?>
-    <div class="posts row justify-content-between  mx-auto">
+    <div class="posts row justify-content-left  mx-auto">
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
       <?php get_template_part('looppart', 'voice'); ?>
       <?php endwhile; ?>
