@@ -5,7 +5,7 @@
     <a class="to_index grid" href="/reform/" title="リフォーム事例一覧ページヘのリンク">一覧</a> </header>
   <script>
 jQuery(function($){
-$('.posts .post.style-example').addClass('col-12 col-sm-6 col-lg-4 ');
+$('#home-reform .posts .post.style-example').addClass('col-6 col-md-4');
 });
 </script>
   <?php

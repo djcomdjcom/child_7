@@ -17,59 +17,41 @@ $args = array(
 $the_query = new WP_Query( $args );
 if ( $the_query->have_posts() ):
   ?>
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/js/owlcarousel/assets/owl.theme.default.min.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/js/owlcarousel/assets/owl.carousel.min.css" media="screen" />
-<script src="<?php bloginfo('stylesheet_directory'); ?>/js/owlcarousel/owl.carousel.min.js"></script> 
-<script type="text/javascript">
+
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/js/slick/slick.css" media="screen">
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/js/slick/slick-theme.css" media="screen">
+<script src="<?php bloginfo('stylesheet_directory'); ?>/js/slick/slick.min.js"></script> 
+<script>
+	
+	
 jQuery(function($){
 
-  $('#inc-eventposts .owl-carousel').owlCarousel({
-
-							loop: true,
-							nav: true,
-							navSpeed: 800,
-							dots: false,
-							dotsSpeed: 800,
-							lazyLoad: true,
-							autoplay: true,
-							autoplayHoverPause: true,
-							autoplayTimeout: 3000,
-							autoplaySpeed:  800,
-							margin: -1,
-							stagePadding:0,
-							freeDrag: false,
-							mouseDrag: false,
-							touchDrag: true,
-							slideBy: 1,
-							fallbackEasing: "linear",
-							responsiveClass: true,
-							navText: [ "previous", "next" ],
-							responsive:{
-							0:{items: 1,stagePadding: 80,},
-							576:{items: 3},
-							1000:{items: 4}
-                                
-                            },
-                            autoHeight: false
-                        });
-                        $('.owl-carousel').on("mousewheel", ".owl-stage", function(e) {
-                if (e.deltaY > 0) {
-                   $('.owl-carousel').trigger("next.owl");
-                } else {
-                    $('.owl-carousel').trigger("prev.owl");
-                }
-                e.preventDefault();
-            });
-	
-	
-                    });
-                
+	$('#inc-eventposts').slick({
+	infinite: true,
+	dots:false,
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	centerMode: true,
+	centerPadding: '1rem',
+	autoplay:true,
+	responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+});
 </script> 
-
 <!--home-event-->
 
-<section class="wrapper" id="inc-eventposts">
-  <div class="owl-carousel owl-theme posts">
+  <div id="inc-eventposts" class="wrapper posts">
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
     <div class="post-<?php the_ID(); ?> clearfix post style-bnrs item p-1">
       <?php if (post_custom('event_bnr_url')) :?>
@@ -101,6 +83,5 @@ jQuery(function($){
     </div>
     <?php endwhile; ?>
   </div>
-</section>
 <!--home-event-->
 <?php endif; wp_reset_postdata(); ?>

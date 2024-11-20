@@ -10,56 +10,58 @@ $args = array(
 $the_query = new WP_Query( $args );
 if ( $the_query->have_posts() ):
   ?>
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/js/owlcarousel/assets/owl.theme.default.min.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/js/owlcarousel/assets/owl.carousel.min.css" media="screen" />
-<script src="<?php bloginfo('stylesheet_directory'); ?>/js/owlcarousel/owl.carousel.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/js/slick/slick.css" media="screen">
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/js/slick/slick-theme.css" media="screen">
+<script src="<?php bloginfo('stylesheet_directory'); ?>/js/slick/slick.min.js"></script> 
 <script>
+	
+	
 jQuery(function($){
 
-  $('#home-example .owl-carousel').owlCarousel({
-
-							loop: true,
-							nav: true,
-							navSpeed: 800,
-							dots: false,
-							dotsSpeed: 800,
-							lazyLoad: true,
-							autoplay: true,
-							autoplayHoverPause: true,
-							autoplayTimeout: 3000,
-							autoplaySpeed:  800,
-							stagePadding: 15,
-							margin:0,
-							freeDrag: true,
-							mouseDrag: true,
-							touchDrag: true,
-							slideBy: 1,
-							fallbackEasing: "linear",
-							responsiveClass: true,
-							navText: [ "previous", "next" ],
-							responsive:{
-							0:{items: 1},
-							576:{items: 2},
-							992:{items: 4},
-							1980:{items: 5}
-                                
-                            },
-                            autoHeight: false
-                        });
-	
-                    });
+	$('.multiple-items').slick({
+	infinite: true,
+	slidesToShow: 4,
+	dots:false,
+	slidesToScroll: 1,
+	centerMode: true,
+	autoplay:true,
+	centerPadding: '5rem',
+	responsive: [
+    {
+      breakpoint: 1400,
+      settings: {
+		centerPadding: '2rem',
+		slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 587,
+      settings: {
+		centerPadding: '1rem',
+        slidesToShow: 1,
+      }
+    },
+  ]
+});
+});
 </script> 
 
 <!--home-event-->
-<section id="home-example" class="py-4 my-4 py-md-5 my-md-5 mx-fit">
+<section id="home-example" class="home-content py-4 my-4 py-md-5 my-md-5 mx-fit">
 <header class="content_header text-sm-center wrapper px-3 px-md-0 mb-3 mb-md-4 block">
 
 <h2 class="ttl mincho">注文住宅施工事例</h2>
 <a class="to_index grid pr-3 pr-xl-0 " href="/example/" title="注文住宅施工事例一覧ページヘのリンク">一覧</a>
 </header>
-<div class="owl-carousel owl-theme posts py-3 block">
+<div class="multiple-items owl-theme posts py-3 block">
   <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-  <div id="post-<?php the_ID(); ?>" class="clearfix style-home-example post linkarea">
+  <div id="post-<?php the_ID(); ?>" class="clearfix style-home-example post linkarea mx-2">
     <?php if ( is_new( WHATSNEW_TTL ) ) : ?>
     <span title="新着" class="tmb-icon new">NEW</span>
     <?php endif; ?>
@@ -91,5 +93,14 @@ jQuery(function($){
 </section>
 <!--home-event-->
 
-<style></style>
+<style>
+.slick-dots li button {
+	font-size: initial;
+	color: initial;
+	background: initial;
+}
+.slick-dots li button:before {
+	content: none;
+}
+</style>
 <?php endif; wp_reset_postdata(); ?>

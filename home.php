@@ -7,7 +7,6 @@ template name: HOME
  */
 get_header();
 ?>
-
 <script>
 jQuery(function($){
     // ウィンドウをスクロールしたら…
@@ -37,14 +36,13 @@ $('#home-blog .posts .post').addClass('col-sm-6 col-md-4 col-12');
 $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4'); 
 });		
 </script>
+
 <div id="home-slider" class="mx-fit">
   <?php get_template_part('hublogslider'); ?>
 </div>
-<div id="home-carousel" class="maxw-1100 mx-auto mb-3 py-4 px-0 px-lg-5 mx-fit">
-  <div id="calousel_ttl" class=" container text-center"> <span class="ttl">Special Contents</span> </div>
+<div id="home-carousel" class="maxw-1100 mx-auto my-3 py-4 px-0 px-lg-5 mx-fit">
   <?php get_template_part('inc', 'event_bnrs'); ?>
 </div>
-
 <style>
 /* フェードインさせる要素 */
 .effect {
@@ -88,7 +86,6 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
         ?>
         <div class="nav-item-inner"> <span class="ttl mincho d-block">住んで健康になれる家</span> </div>
         </a> </li>
-		  
       <li class="col-12 col-md-6 col-lg-3 px-0 px-md-2 pb-md-2"> <a class="w100 btnshine" href="/concept#page_concept01" title="コンセプト「自社職人と自社施工」">
         <?php
         $image_id = 10262; // メディアID
@@ -98,9 +95,9 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
           echo $image;
         }
         ?>
-        <div class="nav-item-inner"> <span class="ttl mincho d-block">自社職人<br>自社施工</span> </div>
+        <div class="nav-item-inner"> <span class="ttl mincho d-block">自社職人<br>
+          自社施工</span> </div>
         </a> </li>
-		  
       <li class="col-12 col-md-6 col-lg-3 px-0 px-md-2 pb-md-2"> <a class="w100 btnshine" href="/concept#page_concept01" title="コンセプト「耐震性・耐久性断熱効果の高い家」">
         <?php
         $image_id = 10246; // メディアID
@@ -110,9 +107,9 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
           echo $image;
         }
         ?>
-        <div class="nav-item-inner"> <span class="ttl mincho d-block">耐震性・耐久性<br>断熱効果の高い家</span> </div>
+        <div class="nav-item-inner"> <span class="ttl mincho d-block">耐震性・耐久性<br>
+          断熱効果の高い家</span> </div>
         </a> </li>
-		  
       <li class="col-12 col-md-6 col-lg-3 px-0 px-md-2 pb-md-2"> <a class="w100 btnshine" href="/concept#page_concept01" title="コンセプト「ゼロエネルギースタイル」">
         <?php
         $image_id = 10269; // メディアID
@@ -122,9 +119,9 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
           echo $image;
         }
         ?>
-        <div class="nav-item-inner"> <span class="ttl mincho d-block">ゼロエネルギー<br>スタイル</span> </div>
+        <div class="nav-item-inner"> <span class="ttl mincho d-block">ゼロエネルギー<br>
+          スタイル</span> </div>
         </a> </li>
-
     </ul>
     <p class="btn  pill"> <a style="font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);" class="bg_key02 mx-auto" href="/concept">コンセプトページはこちら</a> </p>
     </div>
@@ -142,10 +139,9 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
 <!--▼▼▼インフォエリア▼▼▼-->
 <div id="home-infoarea" class=" wrapper container mx-auto px-0 mb-5 ">
   <section id="home-news" class="home-content pt-5 pb-4 mb-4 mb-md-5 px-0 px-md-3 mx-auto">
-  <header class="content_header text-sm-center mb-3 mb-md-4">
+    <header class="content_header text-sm-center mb-3 mb-md-4 maxw-1000 mx-auto">
       <h2 class="ttl mincho">ニュース<span class="txt-s">＆</span>トピックス</h2>
-<a class="to_index" href="/category/news" title="ニュース＆トピックス一覧ページヘのリンク">一覧</a>
-	  </header>
+      <a class="to_index" href="/category/news" title="ニュース＆トピックス一覧ページヘのリンク">一覧</a> </header>
     <?php
     $args = array(
       'post_type' => 'post',
@@ -155,7 +151,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
     $the_query = new WP_Query( $args );
     if ( $the_query->have_posts() ):
       ?>
-    <div class="posts px-0 px-md-3 mx-auto">
+    <div class="posts px-0 px-md-3 maxw-1000 mx-auto">
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
       <?php //get_template_part('looppart', 'headline'); ?>
       <?php get_template_part('looppart', 'headline'); ?>
@@ -166,10 +162,9 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
   
   <!--home-news-->
   <section id="home-event" class="home-content wrapper py-4 py-md-5 ">
-  <header class="content_header text-sm-center mb-3 mb-md-4">
-		
+    <header class="content_header text-sm-center mb-3 mb-md-4">
       <h2 class="ttl mincho">近日イベントのご案内</h2>
-<a class="to_index" href="/category/event" title="イベント情報">一覧</a>    </header>
+      <a class="to_index" href="/category/event" title="イベント情報">一覧</a> </header>
     <?php
     $args = array(
       'post_type' => 'post',
@@ -191,37 +186,30 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
 
 <!--▼▼▼選ばれる理由▼▼▼-->
 
-
 <?php get_template_part('include', 'reason');//選ばれる理由 ?>
 
-<!--　home-infoarea　▲▲▲インフォエリア▲▲▲--> 
+<!--　home-infoarea　▲▲▲インフォエリア▲▲▲-->
 
-
-  <section id="home-voice" class="home-content wrapper py-4 py-md-5 ">
+<section id="home-voice" class="home-content wrapper py-4 py-md-5 ">
   <header class="content_header text-sm-center mb-3 mb-md-4">
-		
-      <h2 class="ttl mincho">お客様の声</h2>
-<a class="to_index" href="/voice/" title="お客様の声">一覧</a>    </header>
-    <?php
-    $args = array(
-      'post_type' => 'voice',
-      'posts_per_page' => 4,
-    );
-    $the_query = new WP_Query( $args );
-    if ( $the_query->have_posts() ):
-      ?>
-    <div class="posts row justify-content-left  mx-auto">
-      <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-      <?php get_template_part('looppart', 'voice'); ?>
-      <?php endwhile; ?>
-    </div>
-    <?php endif; wp_reset_postdata(); ?>
-  </section>
-  <!--home-voice--> 
-
-
-
-
+    <h2 class="ttl mincho">お客様の声</h2>
+    <a class="to_index" href="/voice/" title="お客様の声">一覧</a> </header>
+  <?php
+  $args = array(
+    'post_type' => 'voice',
+    'posts_per_page' => 4,
+  );
+  $the_query = new WP_Query( $args );
+  if ( $the_query->have_posts() ):
+    ?>
+  <div class="posts row justify-content-left  mx-auto">
+    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+    <?php get_template_part('looppart', 'voice'); ?>
+    <?php endwhile; ?>
+  </div>
+  <?php endif; wp_reset_postdata(); ?>
+</section>
+<!--home-voice--> 
 
 <!--▼▼▼代表あいさつとスタッフ紹介▼▼▼-->
 <section id="home-greeting" class="pb-4 ">
@@ -234,10 +222,9 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
     <!--▼▼▼スタッフ紹介▼▼▼-->
     
     <section id="home-staff" class="my-5 home-content">
-    <header class="content_header text-sm-center mb-4 mb-md-5 ">
-		<h2 class="ttl mincho">スタッフ紹介</h2>
-<a class="to_index staff" href="/staff">More</a>
-		</header>
+      <header class="content_header text-sm-center mb-4 mb-md-5 ">
+        <h2 class="ttl mincho">スタッフ紹介</h2>
+        <a class="to_index staff" href="/staff">More</a> </header>
       <div class="flexbox pb-4">
         <?php get_template_part('loop-authors'); ?>
         <div class="staff-list d-none"> <a class="w100" href="/recruit"><img class="pt-2 photo" alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff-topage.png"></a> </div>
@@ -249,12 +236,11 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
 </section>
 <!--　home-greeting　▲▲▲代表あいさつとスタッフ紹介▲▲▲-->
 
-<section id="home-blog" class="home-content mx-fit outerwrap mb-5"> 
+<section id="home-blog" class="home-content mx-fit outerwrap mb-5">
   <div class="wrapper container py-4 py-md-5 ">
     <header class="content_header text-sm-center mb-4 mb-md-5">
       <h2 class="ttl mincho">ブログ</h2>
-		<a class="to_index" href="/category/blog">一覧</a>
-    </header>
+      <a class="to_index" href="/category/blog">一覧</a> </header>
     <?php query_posts('category_name=blog&posts_per_page=3'); ?>
     <div class="posts row justify-content-start">
       <?php while (have_posts()) : the_post(); ?>
@@ -266,21 +252,28 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
 </section>
 <section id="hajimetenavi" class="navi text-center pt-4 pt-md-5 mb-5">
   <header class="content_header wrapper container mb-4 mb-md-5">
-    <h2 class="ttl mincho">お客様の状況に応じて<br>アクションをお選びください</h2>
+    <h2 class="ttl mincho">お客様の状況に応じて<br>
+      アクションをお選びください</h2>
   </header>
   <div class="wrapper container pb-5">
     <ul class="row nav-item justify-content-between x-0 px-0 ">
-      <li class="col-sm-6 col-md-3 mb-1" ><a class="w100" href="/online_sumai"><img class="p-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hajimete_bnr-soudankai@2x.webp" alt="住まいの無料相談会"><div class="nav-item-inner"> <span class="ttl mincho d-block">住まいの無料相談会</span> </div></a></li>
-      <li class="col-sm-6 col-md-3 mb-1" ><a class="w100" href="/online_meeting"><img class="p-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hajimete_bnr-ol_meet@2x.webp" alt="オンライン打ち合わせ"><div class="nav-item-inner"> <span class="ttl mincho d-block">オンライン打ち合わせ</span></div></a></li>
-      <li class="col-sm-6 col-md-3 mb-1" ><a class="w100" href="/kenngakukai"><img class="p-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hajimete_bnr-kengakukai@2x.webp" alt="構造完成見学会"><div class="nav-item-inner"> <span class="ttl mincho d-block">構造完成見学会</span></div></a></li>
-      <li class="col-sm-6 col-md-3 mb-1" ><a class="w100" href="/offer?title=<?php if ( is_home() || is_front_page() ) {  echo ('トップページ');} else {echo get_the_title();}?>"><img class="p-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hajimete_bnr-shiryou@2x.webp" alt="資料請求"><div class="nav-item-inner"> <span class="ttl mincho d-block">資料請求</span></div></a></li>
+      <li class="col-sm-6 col-md-3 mb-1" ><a class="w100" href="/online_sumai"><img class="p-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hajimete_bnr-soudankai@2x.webp" alt="住まいの無料相談会">
+        <div class="nav-item-inner"> <span class="ttl mincho d-block">住まいの無料相談会</span> </div>
+        </a></li>
+      <li class="col-sm-6 col-md-3 mb-1" ><a class="w100" href="/online_meeting"><img class="p-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hajimete_bnr-ol_meet@2x.webp" alt="オンライン打ち合わせ">
+        <div class="nav-item-inner"> <span class="ttl mincho d-block">オンライン打ち合わせ</span></div>
+        </a></li>
+      <li class="col-sm-6 col-md-3 mb-1" ><a class="w100" href="/kenngakukai"><img class="p-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hajimete_bnr-kengakukai@2x.webp" alt="構造完成見学会">
+        <div class="nav-item-inner"> <span class="ttl mincho d-block">構造完成見学会</span></div>
+        </a></li>
+      <li class="col-sm-6 col-md-3 mb-1" ><a class="w100" href="/offer?title=<?php if ( is_home() || is_front_page() ) {  echo ('トップページ');} else {echo get_the_title();}?>"><img class="p-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hajimete_bnr-shiryou@2x.webp" alt="資料請求">
+        <div class="nav-item-inner"> <span class="ttl mincho d-block">資料請求</span></div>
+        </a></li>
     </ul>
   </div>
 </section>
 <?php // get_template_part('include', 'contact'); ?>
 <div class="container">
-<?php get_template_part('include', 'zeh'); ?>
+  <?php get_template_part('include', 'zeh'); ?>
 </div>
-
-
 <?php get_footer(); ?>
