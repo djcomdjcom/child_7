@@ -1,6 +1,6 @@
 <header id="header">
-    <div id="globalheader">
-        <div class="sitetitle pl-2 pl-xl-0 pt-2">
+    <div id="globalheader" class="d-flex">
+        <div class="sitetitle">
             <a class="w100 to_home" href="/" >
                 <?php if (is_home() ): ?>
                     <h1 class="w100">
@@ -22,7 +22,7 @@
             </a>
         </div>
 
-        <nav id="headnav" class="">
+        <nav id="headnav" class="flex-fill">
             <?php get_template_part( 'global-navi-menu' ); ?>
         </nav>
     </div>

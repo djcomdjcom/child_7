@@ -1,9 +1,9 @@
-<section id="ohikiwatashi-flow01" class="clearfix anchor">
+<section id="ohikiwatashi-flow01" class="anchor mt-0">
 	<div class="slide-table">
-		<table style="min-width: 1000px;">
+		<table style="min-width: 800px;">
 			<tr>
 		  <td class="border-0">
-			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow-chart@2x.png"  alt="着工から引渡しまでの流れ"/>
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow-chart@2x.webp"  alt="着工から引渡しまでの流れ"/>
 			</td>
 			</tr>
 		</table>
@@ -12,10 +12,10 @@
 
 
 <!--ohikiwatashi-flow01-->
-<section id="ohikiwatashi-flow02" class="clearfix anchor">
+<section id="ohikiwatashi-flow02" class="anchor">
   <dl class="flow">
-    <dt><span> 近隣ご挨拶 </span></dt>
-    <dd>
+    <dt><span class="txt-l mincho">近隣ご挨拶 </span></dt>
+    <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
           <p>工事着工する前に、近隣の皆様へご挨拶をいたします。</p>
@@ -23,12 +23,12 @@
         </div>
         <div class="col-sm-5">
           <figure class="w100">
-			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow001@2x.jpg" alt="近隣ご挨拶"/> </figure>
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow001@2x.webp" alt="近隣ご挨拶"/> </figure>
         </div>
       </div>
     </dd>
-    <dt><span> 既存建物の解体 </span></dt>
-    <dd>
+    <dt><span class="txt-l mincho"> 既存建物の解体 </span></dt>
+    <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
           <p>既存建物の解体までに仮住まいへのお引越しをします。<br>
@@ -37,12 +37,12 @@
         </div>
         <div class="col-sm-5">
           <figure class="w100">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow002@2x.jpg" alt="既存建物の解体"/> </figure>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow002@2x.webp" alt="既存建物の解体"/> </figure>
         </div>
       </div>
     </dd>
-    <dt><span> 地鎮祭 </span></dt>
-    <dd>
+    <dt><span class="txt-l mincho"> 地鎮祭 </span></dt>
+    <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
           <p>神主様をお呼びして土地の神様に工事の安全や健康を祈願します。神主様への玉串料（3万5千円）を当日ご用意いただく必要があります。</p>
@@ -50,12 +50,12 @@
         </div>
         <div class="col-sm-5">
           <figure class="w100">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow003@2x.jpg" alt="地鎮祭"/> </figure>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow003@2x.webp" alt="地鎮祭"/> </figure>
         </div>
       </div>
     </dd>
-    <dt><span> 地盤調査・地盤改良 </span></dt>
-    <dd>
+    <dt><span class="txt-l mincho"> 地盤調査・地盤改良 </span></dt>
+    <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
           <p>地盤調査を行ない、必要があれば地盤改良を行ないます。</p>
@@ -64,12 +64,12 @@
         </div>
         <div class="col-sm-5">
           <figure class="w100">
-			  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow004@2x.jpg" alt="地盤調査・地盤改良"/> </figure>
+			  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow004@2x.webp" alt="地盤調査・地盤改良"/> </figure>
         </div>
       </div>
     </dd>
-    <dt><span> 基礎工事 </span></dt>
-    <dd>
+    <dt><span class="txt-l mincho"> 基礎工事 </span></dt>
+    <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
           <p>構造計算された頑強な基礎工事をするにあたり、自社設計士による配筋検査と第三者機関である（株）日本住宅保証検査機構の配筋検査を実施します。基礎の中に隠れてしまうため、鉄筋が設計通りに組み上げられているかダブルチェックを行っています。</p>
@@ -79,13 +79,13 @@
         </div>
         <div class="col-sm-5">
           <figure class="w100">
-			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow005@2x.jpg" alt="基礎工事"/>
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow005@2x.webp" alt="基礎工事"/>
 			</figure>
         </div>
       </div>
     </dd>
-    <dt><span> 上棟・上棟式 </span></dt>
-    <dd>
+    <dt><span class="txt-l mincho"> 上棟・上棟式 </span></dt>
+    <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
           <p>上棟とは、柱や梁、桁を組み上げ、建物の一番高い棟木の取り付けまでの工事です。</p>
@@ -96,13 +96,13 @@
         </div>
         <div class="col-sm-5">
           <figure class="w100">
-			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow006@2x.jpg" alt="上棟・上棟式"/>
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow006@2x.webp" alt="上棟・上棟式"/>
 			</figure>
         </div>
       </div>
     </dd>
-    <dt><span> 木工事・構造見学会 </span></dt>
-    <dd>
+    <dt><span class="txt-l mincho"> 木工事・構造見学会 </span></dt>
+    <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
           <p>屋根や壁など建物の主要部分を仕上げていきます。</p>
@@ -111,25 +111,25 @@
         </div>
         <div class="col-sm-5">
           <figure class="w100">
-			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow007@2x.jpg" alt="木工事・構造見学会"/>
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow007@2x.webp" alt="木工事・構造見学会"/>
 			</figure>
         </div>
       </div>
     </dd>
-    <dt><span> 設備取付け工事 </span></dt>
-    <dd>
+    <dt><span class="txt-l mincho"> 設備取付け工事 </span></dt>
+    <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
           <p>ショールームでお選びいただいた水廻り設備の取り付けをします。</p>
         </div>
         <div class="col-sm-5">
           <figure class="w100">
-			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow008@2x.jpg" alt="設備取付け工事"/></figure>
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow008@2x.webp" alt="設備取付け工事"/></figure>
         </div>
       </div>
     </dd>
-    <dt><span> 使い勝手検討会・内部仕上げ工事 </span></dt>
-    <dd>
+    <dt><span class="txt-l mincho"> 使い勝手検討会・内部仕上げ工事 </span></dt>
+    <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
           <p>図面を見ながら現場でお打ち合わせをいたします。例えば「この棚を少し大きくしたい」「ここに照明スイッチがほしい」「コンセントを増やしたい」というように、毎日の生活シーンを現場で実際にシミュレーションして、住みはじめた時からストレスのない使い勝手になるように検討します。</p>
@@ -137,13 +137,13 @@
             使い勝手検討会を終えてから内部仕上げ工事を進めます。</p>
         </div>
         <div class="col-sm-5">
-          <figure class="w100"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow009@2x.jpg" alt="使い勝手検討会・内部仕上げ工事"/>
+          <figure class="w100"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow009@2x.webp" alt="使い勝手検討会・内部仕上げ工事"/>
 			</figure>
         </div>
       </div>
     </dd>
-    <dt><span> 外構工事・完成見学会 </span></dt>
-    <dd>
+    <dt><span class="txt-l mincho"> 外構工事・完成見学会 </span></dt>
+    <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
           <p>隣地の方と境界の施工など、ご納得いただいてから外構工事を進めます。<br>
@@ -154,13 +154,13 @@
           <p class="red">※完成見学会の開催はお願いですので、強制ではございません。</p>
         </div>
         <div class="col-sm-5">
-          <figure class="w100"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow010@2x.jpg" alt="外構工事・完成見学会"/>
+          <figure class="w100"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow010@2x.webp" alt="外構工事・完成見学会"/>
 			</figure>
         </div>
       </div>
     </dd>
-    <dt><span> 登記の準備 </span></dt>
-    <dd>
+    <dt><span class="txt-l mincho"> 登記の準備 </span></dt>
+    <dd class="inbox">
       <p>登記には建物表題登記（表示登記）と保存登記があります。<br>
         住宅ローンの契約に担保設定が必要なため、引き渡し前に登記の準備に入ります。<br>
         登記のタイミング、土地家屋調査士や司法書士のご紹介もいたします。</p>
@@ -174,8 +174,8 @@
         登記記録上では、権利部の甲区（登記記録の不動産の所有権に関する事項を記載した部分）に「所有権保存　所有者A」のように記載されます。<br>
         所有権の保存の登記をすることができるのは、原則として、表題部所有者です（不動産登記法第74条）。</p>
     </dd>
-    <dt><span> オーナー引き渡し検査・お引渡し・取り扱い説明会 </span></dt>
-    <dd>
+    <dt><span class="txt-l mincho"> オーナー引き渡し検査・お引渡し・取り扱い説明会 </span></dt>
+    <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
           <p>建物に問題がないか完了チェックをお施主様と一緒に行ないます。<br>
@@ -183,13 +183,13 @@
             この頃、建物工事代金の残金のお支払いがございます。</p>
         </div>
         <div class="col-sm-5">
-          <figure class="w100"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow012@2x.jpg" alt="オーナー引き渡し検査・お引渡し・取り扱い説明会"/>
+          <figure class="w100"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow012@2x.webp" alt="オーナー引き渡し検査・お引渡し・取り扱い説明会"/>
 			</figure>
         </div>
       </div>
     </dd>
-    <dt><span> お引越し </span></dt>
-    <dd>
+    <dt><span class="txt-l mincho"> お引越し </span></dt>
+    <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
           <p>引っ越しは大変な作業ですが、自慢のわが家を自分好みの空間にする時間です。<br>
@@ -198,13 +198,13 @@
           <p>また、オプションで整理収納アドバイザーを派遣するサービスもございます。</p>
         </div>
         <div class="col-sm-5">
-          <figure class="w100"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow013@2x.jpg" alt="お引越し"/>
+          <figure class="w100"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow013@2x.webp" alt="お引越し"/>
 			</figure>
         </div>
       </div>
     </dd>
-    <dt><span> ヒアリングとアドバイス（住まい方勉強会） </span></dt>
-    <dd>
+    <dt><span class="txt-l mincho"> ヒアリングとアドバイス（住まい方勉強会） </span></dt>
+    <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
           <p>新居での生活がスタートして自分好みの空間になり始めた頃、お施主様のご意見やご要望をヒアリングにお伺いいたします。<br>
@@ -213,7 +213,7 @@
             何かございましたら、いつでもお気軽にご相談いただければ、すぐにご対応することができます。</p>
         </div>
         <div class="col-sm-5">
-          <figure class="w100"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow014@2x.jpg" alt="ヒアリングとアドバイス（住まい方勉強会）"/>
+          <figure class="w100"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/ohikiwatashi-flow014@2x.webp" alt="ヒアリングとアドバイス（住まい方勉強会）"/>
 			</figure>
         </div>
       </div>

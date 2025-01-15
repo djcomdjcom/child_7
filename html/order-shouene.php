@@ -1,27 +1,27 @@
-<section id="zeh" class="clearfix anchor">
-  <h2 class="title">ZEH</h2>
-  <h3>ZEHとは</h3>
+<section id="zeh" class="zeh_point anchor">
+  <h2 class="ttl">ZEH</h2>
+  <h3 class="ttl mb-4">ZEHとは</h3>
   <p> ZEH（ゼッチ）は、Net Zero Energy House（ネット・ゼロ・エネルギー・ハウス）の略称で、年間のエネルギー収支がゼロ以下になる住宅のことです。
     高断熱や省エネの性能を高めるだけでなく、太陽光発電などでエネルギーを創り出すことによって、エネルギー収支をプラスマイナス「ゼロ」、または消費エネルギー量よりも自宅で創るエネルギー量が多い状態にする住宅を指します。 </p>
-  <h4 class="ttl brackets2 " >ZEHに必要な住宅の3つのポイント</h4>
+  <h4 class="ttl brackets2 bold pt-4 mb-3" >ZEHに必要な住宅の3つのポイント</h4>
   <p> ZEHは消費エネルギーをできるだけ減らすことに加え、自宅の消費に必要な量、またはそれ以上のエネルギー量を創出できる家であることが求められます。
     つまり、断熱・省エネ・創エネの3つがそろってZEHが実現できます。 </p>
-  <figure class="w100 maxw-890 mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/zeh001.webp" alt="「創エネ」「省エネ」「断熱」"> </figure>
-  <figure class="w100 maxw-890 mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/zeh002.webp" alt="（断熱+省エネ）-創エネ≦0"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/zeh003.webp" alt="ZEH 3つのポイント"> </figure>
-  <section id="zeh_pints" class="clearfix anchor border-top">
-    <div class="zeh_point  border-bottom">
-      <h4 class="green"><span>1</span>断熱</h4>
+  <figure class="w100  mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/zeh001.webp" alt="「創エネ」「省エネ」「断熱」"> </figure>
+  <figure class="w100  mx-auto mb-5"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/zeh002.webp" alt="（断熱+省エネ）-創エネ≦0"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/zeh003.webp" alt="ZEH 3つのポイント"> </figure>
+  <section id="zeh_pints" class="zeh_point border p-4 mb-4">
+    <div class="zeh_point pb-4">
+      <h4 class="green border-bottom"><span>1</span>断熱</h4>
       <p> 外気の暑さや寒さに影響されにくい高性能な断熱材（SW工法）を導入し、結露しにくいサッシや窓を採用することで断熱性能を向上させています。<br>
         住宅の断熱性能に加えて熱交換換気システムでエネルギーロスを低減し、消費エネルギーを最小限に抑えた家づくりをしています。 </p>
     </div>
-    <div class="zeh_point border-bottom">
-      <h4 class="blue"><span>2</span>省エネ</h4>
+    <div class="zeh_point pb-4">
+      <h4 class="blue border-bottom"><span>2</span>省エネ</h4>
       <p> HEMS（家庭内のエネルギー消費や創エネを管理コントロールし、効率化を図る管理システム）や省エネ性能の高い機器を取り入れて、消費エネルギーを削減します。<br>
         電気の消費を抑えたエアコン、エコキュートやハイブリッド給湯器など高効率な給湯システム、長寿命で電力消費の少ないLED照明の設置など省エネ効果だけでなく、快適さを実現した設備を標準使用としています。 </p>
       <p class="rerated"> <span>詳しくはこちら</span> <a href="#hems">「HEMS(ヘムス)とは？」</a> </p>
     </div>
-    <div class="zeh_point border-bottom">
-      <h4 class="orange"><span>3</span>創エネ</h4>
+    <div class="zeh_point pb-4">
+      <h4 class="orange border-bottom"><span>3</span>創エネ</h4>
       <p> 消費エネルギーをゼロ以下にするためには、太陽光発電や家庭用燃料電池（エネファーム）などの創エネ設備で電力を創り出すことが必要です。
         エネルギーを創り出し、消費エネルギーを上回る住宅にするために、太陽光パネルなど創エネ設備のご提案もいたします。 </p>
       <p class="rerated"> <span>詳しくはこちら</span> <a href="#souene">「創エネ」</a> </p>
@@ -34,50 +34,50 @@
 </section>
 <!--zeh-->
 
-<section id="passivehouse" class="clearfix anchor">
-  <h2 class="title ">パッシブハウス</h2>
-  <h3>パッシブハウスとは</h3>
+<section id="passivehouse" class="zeh_point anchor">
+  <h2 class="ttl">パッシブハウス</h2>
+  <h3 class="ttl mb-4">パッシブハウスとは</h3>
   <p> 「パッシブハウス」は省エネ性、断熱性、気密性の高い家づくりに加え、通風、日射取得、日射遮蔽で快適さを維持した、自然の恵みを活用するという考え方の家づくりです。 </p>
   <p> パッシブハウスの考え方を取り入れて、太陽の光と熱、そして風といった「自然エネルギー」を活用し、省エネで快適な住まいを実現します。<br>
     具体的には、断熱材や窓ガラスなどの建物断熱性能の向上、通風計画、夏は太陽の日差しから影をつくる日射遮蔽、冬は日差しを積極的に取り入れる日射取得など、効率的に自然の恵みを活用できる設計力と施工力で実現しています。 </p>
-  <figure class="w100 maxw-890 mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/passivehouse.webp" alt="パッシブ設計を考えた住まい"> </figure>
+  <figure class="w100  mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/passivehouse.webp" alt="パッシブ設計を考えた住まい"> </figure>
 </section>
 <!--passivehouse-->
 
-<section id="hems" class="clearfix anchor">
-<h2 class="title">HEMS</h2>
-<h3>HEMSとは</h3>
-<p> HEMS（ヘムス）とは、Home Energy Management System（ホーム エネルギー マネジメント システム）の頭文字をとったものです。<br>
-  HEMSは、一般家庭で使用する電気やガスをリアルタイムに管理して節約するシステムです。節電だけでなく、CO2削減など温暖化対策にも役立ちます。<br>
-  また、システムにつないで電気やガスの使用状況をモニターで管理することで、見える化や家電を自動コントロールします。 </p>
-<h4 class="ttl brackets2">
-HEMSの仕組み
-</h3>
-<figure class="w100 maxw-890 mx-auto "> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/hems001.webp" alt="HEMSの仕組み"> </figure>
-<h4 class="ttl brackets2">HEMS（ヘムス）の2大要素</h4>
-<h4 class="ttl numbering" ><span class="maru">1</span>エネルギーの見える化</h4>
-<p> 住宅にHEMSを設置すると、家庭の電気使用量の数値が最少単位まで見えるようになります。それだけでなく、他のエネルギーであるガスや水道とも連携ができますから、家庭のすべてのエネルギー使用量の数値をいつ・どこで・何に使用しているのかを目で見て確認・把握することができます。 </p>
-<h4 class="ttl numbering" ><span class="maru">2</span>エネルギーの一元化（一元管理）</h4>
-<p> 家の中の電化製品を一括してネットワーク化することにより、自動制御や遠隔操作を可能にし、自動的にエネルギー使用量を最適化することができます。 </p>
-<p> ★新築住宅で、年間エネルギーをほぼゼロにする住宅(ZEH)にもHEMSは必須です！<br>
-  HEMSは、太陽光発電システムや家庭用蓄電池とともに、政府のエネルギー政策の重要な根幹の一部です。それだけに国や地方自治体はHEMSには非常に力を入れており、家庭への導入に対しては補助金を出して後押ししています。 </p>
+<section id="hems" class="zeh_point anchor">
+  <h2 class="ttl">HEMS</h2>
+  <div class="pb-4 pb-sm-5">
+    <h3 class="ttl mb-4">HEMSとは</h3>
+    <p class="">HEMS（ヘムス）とは、Home Energy Management System（ホーム エネルギー マネジメント システム）の頭文字をとったものです。<br>
+      HEMSは、一般家庭で使用する電気やガスをリアルタイムに管理して節約するシステムです。節電だけでなく、CO2削減など温暖化対策にも役立ちます。<br>
+      また、システムにつないで電気やガスの使用状況をモニターで管理することで、見える化や家電を自動コントロールします。 </p>
+  </div>
+  <h4 class="ttl brackets2 bold mt-4"> HEMSの仕組み </h4>
+  <figure class="w100  mx-auto mb-4 mb-sm-5"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/hems001.webp" alt="HEMSの仕組み"> </figure>
+  <h4 class="ttl brackets2 bold mb-3">HEMS（ヘムス）の2大要素</h4>
+  <h5 class="ttl numbering bold" ><span class="maru">1</span>エネルギーの見える化</h5>
+  <p class="pl-4 mb-4">住宅にHEMSを設置すると、家庭の電気使用量の数値が最少単位まで見えるようになります。それだけでなく、他のエネルギーであるガスや水道とも連携ができますから、家庭のすべてのエネルギー使用量の数値をいつ・どこで・何に使用しているのかを目で見て確認・把握することができます。 </p>
+  <h5 class="ttl numbering bold" ><span class="maru">2</span>エネルギーの一元化（一元管理）</h5>
+  <p class="pl-4 mb-4">家の中の電化製品を一括してネットワーク化することにより、自動制御や遠隔操作を可能にし、自動的にエネルギー使用量を最適化することができます。 </p>
+  <p class="indent-1 mb-0">★新築住宅で、年間エネルギーをほぼゼロにする住宅(ZEH)にもHEMSは必須です！</p>
+  <p>HEMSは、太陽光発電システムや家庭用蓄電池とともに、政府のエネルギー政策の重要な根幹の一部です。それだけに国や地方自治体はHEMSには非常に力を入れており、家庭への導入に対しては補助金を出して後押ししています。 </p>
 </section>
 <!--hems-->
 
-<section id="kisodanesu" class="clearfix anchor">
-  <h2 class="title " >基礎断熱</h2>
-  <div class="row">
+<section id="kisodanesu" class="zeh_point anchor">
+  <h2 class="ttl" >基礎断熱</h2>
+  <div class="row pb-4 pb-sm-5">
     <div class="col-sm-6">
-      <h3 class="title noicon">基礎断熱とは？</h3>
+      <h3 class="ttl mb-4">基礎断熱とは？</h3>
       <p> 基礎断熱とは、床下空間も室内空間のひとつとして考え、基礎内部をぐるっと断熱材で覆います。そして床下からの熱を伝わりにくくし、床下からの換気をなくし、床下空間を暖かく保つ工法です。 </p>
       <p> 木造住宅は、根太・大引きのあいだに断熱材を落とし込む方法が簡単であったため、「床断熱」が昔から主流でしたが、北海道などでは、水道の凍結を防ぐという目的で、「基礎断熱」工法が開発され、普及しました。</p>
       <p> 基礎の立ち上がりで断熱をするために、床下の温度と同じになるので、基礎断熱には大いなるメリットがあります。 </p>
     </div>
     <div class="col-sm-6">
-      <figure class="w100 maxw-890 mx-auto pl-sm-5"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/kisodanesu001.webp" alt="基礎断熱のイメージ"> </figure>
+      <figure class="w100  mx-auto pl-sm-5"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/kisodanesu001.webp" alt="基礎断熱のイメージ"> </figure>
     </div>
   </div>
-  <h4 class="ttl brackets2" >基礎断熱のメリット</h4>
+  <h4 class="ttl brackets2 bold mb-3" >基礎断熱のメリット</h4>
   <ul class="check">
     <li> 気密施工が簡単にできるので、断熱・気密性が確保しやすい </li>
     <li> 床下空間は室内空間と考えるので、室温と近くなり冬の床の冷たさが和らぐ </li>
@@ -89,30 +89,29 @@ HEMSの仕組み
 </section>
 <!--kisodanesu-->
 
-<section id="dannetsukouzou" class="clearfix anchor">
-  <h2 class="title " >断熱構造と性能</h2>
-  <h3>断熱構造</h3>
+<section id="dannetsukouzou" class="zeh_point anchor">
+  <h2 class="ttl" >断熱構造と性能</h2>
+  <h3 class="ttl mb-4">断熱構造</h3>
   <p> 高性能とパッシブ設計によりいつまでも居心地よ良い暮らしを実現することで、建てたときの満足感が持続します。 </p>
   <p> 建物構造が高性能ならば、ライフスタイルに応じて間取りを変更するのは容易ですから、建替えする必要がなく永く住める家づくりになります。 </p>
-  <p class="w100 maxw-890 mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/dannetsukouzou001.webp" alt="断熱構造の住宅イメージ"> </p>
+  <p class="w100  mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/dannetsukouzou001.webp" alt="断熱構造の住宅イメージ"> </p>
+  <section id="dannetsuseinou" class="zeh_point anchor">
+    <h3 class="ttl mb-4">断熱性能</h3>
+    <p class="lead">基礎断熱の家は、冬暖かく、夏涼しい</p>
+    <p> 木造住宅は、根本・大引きのあいだに断熱材を落し込む方法が簡単であったために「床断熱」が昔から主流でしたが、北海道などでは、水道の凍結を防ぐという目的で「基礎断熱」工法が開発され普及しました。基礎の立ち上がりで断熱をするために、床下が室内の温度と同じになるので、弊社は<span class="red">「基礎断熱は大いなるメリットがある」</span>と考え採用しております。<br>
+      その最大のメリットは「家全体が快適な温度に保たれる」ことです。床下空間も居室と同じ温湿環境ですから足下が寒いということもありません。シロアリ対策している基礎外断熱（ミラポリカフォーム）を使用していますから、「家が長持ちする」というメリットもあります。 </p>
+    <figure class="w100  mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/dannetsuseinou001.webp" alt="床断熱/基礎断熱イメージ"> </figure>
+  </section>
+  <!--dannetsuseinou--> 
 </section>
 <!--dannetsukouzou-->
 
-<section id="dannetsuseinou" class="clearfix anchor">
-  <h3>断熱性能</h3>
-  <p class="lead">基礎断熱の家は、冬暖かく、夏涼しい</p>
-  <p> 木造住宅は、根本・大引きのあいだに断熱材を落し込む方法が簡単であったために「床断熱」が昔から主流でしたが、北海道などでは、水道の凍結を防ぐという目的で「基礎断熱」工法が開発され普及しました。基礎の立ち上がりで断熱をするために、床下が室内の温度と同じになるので、弊社は<span class="red">「基礎断熱は大いなるメリットがある」</span>と考え採用しております。<br>
-    その最大のメリットは「家全体が快適な温度に保たれる」ことです。床下空間も居室と同じ温湿環境ですから足下が寒いということもありません。シロアリ対策している基礎外断熱（ミラポリカフォーム）を使用していますから、「家が長持ちする」というメリットもあります。 </p>
-  <figure class="w100 maxw-890 mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/dannetsuseinou001.webp" alt="床断熱/基礎断熱イメージ"> </figure>
-</section>
-<!--dannetsuseinou-->
-
-<section id="onnetsukankyou" class="clearfix anchor">
-  <h2 class="title " >温熱環境</h2>
+<section id="onnetsukankyou" class="zeh_point anchor">
+  <h2 class="ttl" >温熱環境</h2>
   <div class="row">
     <div class="col-sm-8">
-      <h3>温熱環境（SW工法）</h3>
-      <h4 class="ttl brackets2">スーパーウォールパネル</h4>
+      <h3 class="ttl mb-4">温熱環境（SW工法）</h3>
+      <h4 class="ttl brackets2 bold mb-3">スーパーウォールパネル</h4>
       <p> 高性能な硬質ウレタンフォームを使用したスーパーウォールパネル、高断熱サッシ、高性能ガラス・計画換気システムが標準仕様の家づくりで、SW工法の優れた断熱機能が生まれ、健康的で快適な暮らしを実現します！ </p>
     </div>
     <div class="col-sm-4">
@@ -122,12 +121,12 @@ HEMSの仕組み
 </section>
 <!--onnetsukankyou-->
 
-<section id="sash" class="clearfix anchor">
-  <h2 class="title " >サッシ・窓</h2>
+<section id="sash" class="zeh_point anchor">
+  <h2 class="ttl " >サッシ・窓</h2>
   <div class="row">
     <div class="col-sm-7">
-      <h3>サッシ・窓</h3>
-      <h4 class="ttl brackets2" >窓サッシについて</h4>
+      <h3 class="ttl mb-4">サッシ・窓</h3>
+      <h4 class="ttl brackets2 bold mb-3" >窓サッシについて</h4>
       <p> 窓サッシのお悩みは、「風通し、夏の暑さ、<br>
         冬の寒さ、結露…」ではないでしょうか？<br>
         その他にも、騒音、プライバシー、防犯など、窓に関するストレスはいくつもあります。 </p>
@@ -142,22 +141,22 @@ HEMSの仕組み
 </section>
 <!--sash-->
 
-<section id="door" class="clearfix anchor">
-  <h2 class="title">断熱ドア</h2>
-  <h3>断熱ドアとは</h3>
-  <p class="ttl brackets2" >断熱ドア</p>
+<section id="door" class="zeh_point anchor">
+  <h2 class="ttl">断熱ドア</h2>
+  <h3 class="ttl mb-4">断熱ドアとは</h3>
+  <p class="ttl brackets2 bold mb-3" >断熱ドア</p>
   <p> 特に外の気温の影響を受けやすいと言われている玄関ドアには、断熱性能の高い「K4」を標準仕様で設置します。</p>
-  <figure class="w100 maxw-890 mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/dannetsudoor001.webp" alt="断熱ドアのラインナップ"> </figure>
+  <figure class="w100  mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/dannetsudoor001.webp" alt="断熱ドアのラインナップ"> </figure>
 </section>
 <!--door-->
 
-<section id="light" class="clearfix anchor">
-  <h2 class="title " >照明器具</h2>
-  <h3>照明器具</h3>
-  <h4 class="ttl brackets2">省エネ性の効果が高い「LED照明」</h4>
+<section id="light" class="zeh_point anchor">
+  <h2 class="ttl">照明器具</h2>
+  <h3 class="ttl mb-4">照明器具</h3>
+  <h4 class="ttl brackets2 bold mb-3">省エネ性の効果が高い「LED照明」</h4>
   <p> 照明は、器具や手法によって温かさ、落ち着き、くつろぎなどさまざまな雰囲気を演出するだけでなく、経済性や自然環境への影響度にも配慮することにより、省エネ性やランプ寿命などを長く保つことができます。 省エネ性の効果が高い「LED照明」を標準仕様としています。 </p>
-  <figure class="w100 maxw-890 mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/light001.webp" alt="LED照明"> </figure>
-  <h4 class="ttl brackets2" >LED照明のメリット</h4>
+  <figure class="w100  mx-auto ,b-4 mb-sm-5"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/light001.webp" alt="LED照明"> </figure>
+  <h4 class="ttl brackets2 bold mb-3" >LED照明のメリット</h4>
   <ul class="check">
     <li> 蛍光灯の消費電力と比較して、40〜50％ほど削減 </li>
     <li> CO2の削減にも貢献し、地球温暖化防止に対して大きな効果 </li>
@@ -167,21 +166,21 @@ HEMSの仕組み
 </section>
 <!--light-->
 
-<section id="aircon" class="clearfix anchor">
-  <h2 class="title " >エアコン</h2>
-  <h3>エアコン</h3>
-  <h4 class="ttl brackets2">エアコンを標準仕様で設置</h4>
+<section id="aircon" class="zeh_point anchor">
+  <h2 class="ttl">エアコン</h2>
+  <h3 class="ttl mb-4">エアコン</h3>
+  <h4 class="ttl brackets2 bold mb-3">エアコンを標準仕様で設置</h4>
   <p> 熱効率の良い快適な住宅には家を高断熱・高気密にする必要があり、そのためには熱交換換気が必要不可欠となります。<br>
     なぜなら、気密性の高い空間には換気が必要ですが、その換気を一般的な換気口や窓からとると、熱のロスがとても大きいのです。せっかく建物を熱効率のいい造りにしているのに、窓を開けてそのまま外気を入れてしまうと熱が逃げてしまい、快適性も奪われてしまいますし、冷暖房をたくさんしなければならなくなって、省エネどころか光熱費もかかってしまうからです。 </p>
 </section>
 <!--aircon"-->
 
-<section id="netsukoukan" class="clearfix anchor">
-  <h2 class="title " >熱交換換気</h2>
-  <h3>熱交換換気について</h3>
+<section id="netsukoukan" class="zeh_point anchor">
+  <h2 class="ttl">熱交換換気</h2>
+  <h3 class="ttl mb-4">熱交換換気について</h3>
   <p> 熱効率の良い快適な住宅には家を高断熱・高気密にする必要があり、そのためには熱交換換気が必要不可欠となります。<br>
     なぜなら、気密性の高い空間には換気が必要ですが、その換気を一般的な換気口や窓からとると、熱のロスがとても大きいのです。せっかく建物を熱効率のいい造りにしているのに、窓を開けてそのまま外気を入れてしまうと熱が逃げてしまい、快適性も奪われてしまいますし、冷暖房をたくさんしなければならなくなって、省エネどころか光熱費もかかってしまうからです。 </p>
-  <div class="row maxw-980 mx-auto">
+  <div class="row  mx-auto">
     <div class="col-sm-6  px-5">
       <figure class="w100"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/netsukoukan001.webp" alt="全熱交換型換気システムの図"> </figure>
     </div>
@@ -191,7 +190,7 @@ HEMSの仕組み
         「エコエア85」 </p>
     </div>
   </div>
-  <p class="ttl brackets2" >熱交換換気は・・・</p>
+  <p class="ttl brackets2 bold" >熱交換換気は・・・</p>
   <ul class="check">
     <li> 温度をムダにしない熱交換システムで計画的換気 </li>
     <li> 年中、外気温の影響を受けにくい室内環境を実現 </li>
@@ -205,12 +204,12 @@ HEMSの仕組み
 </section>
 <!--netsukoukan-->
 
-<section id="solarpanel" class="clearfix anchor">
-  <h2 class="title " >太陽光パネル</h2>
-  <h3>創エネ（太陽光パネル）</h3>
+<section id="solarpanel" class="zeh_point anchor">
+  <h2 class="ttl">太陽光パネル</h2>
+  <h3 class="ttl mb-4">創エネ（太陽光パネル）</h3>
   <p> 太陽光パネルを設置することで、エネルギーを消費するだけの家から、エネルギーを創り出す家にすることができます。<br>
     創エネ設備の導入で家計と環境に優しい家づくりを実現できます。 </p>
-  <p class="w100 maxw-890 mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/solarpanel001.webp" alt="太陽光パネルのある家"><small>ソーラーパネル</small> </p>
+  <p class="w100  mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/solarpanel001.webp" alt="太陽光パネルのある家"><small>ソーラーパネル</small> </p>
   <h4 class="orange" >太陽光パネルの活用方法</h4>
   <p>家庭内の電気として使用したり、余りがあれば電力会社へ売電することができます。</p>
   <p>「断熱・省エネ・創エネ」の3つにより、ZEHの家づくりが実現できます。</p>
@@ -218,14 +217,14 @@ HEMSの仕組み
 </section>
 <!--solarpanel-->
 
-<section id="kyuutousystem" class="clearfix anchor">
-<h2 class="title " >給湯システム</h2>
-<h3>給湯システム </h3>
+<section id="kyuutousystem" class="zeh_point anchor">
+<h2 class="ttl">給湯システム</h2>
+<h3 class="ttl mb-4">給湯システム </h3>
 <p> 日々の暮らしの中で、お湯を生み出す給湯システムは、とても重要な設備機器です。<br>
   キッチンやバスルームなどの水まわりの給湯はもとより、床暖房や浴室換気暖房乾燥機などで使用する場合もあります。<br>
   最近では、さまざまなシステムの機器がみられ、住まい全体にかかる費用や消費に大きく影響してきます。<br>
   <?php echo get_option('profile_shop_name'); ?>では、従来型の給湯システムより熱効率が高く、少ない燃料でたくさんのお湯を沸かすことが出来る高効率な給湯システムである「省エネ型の給湯システム」を標準仕様としています。 </p>
-<h4 class="ttl brackets2">省エネ型の給湯システムのメリット</h4>
+<h4 class="ttl brackets2 bold mb-3">省エネ型の給湯システムのメリット</h4>
 <h5 class="ttl brackets" >光熱費の節約効果</h5>
 <p> 燃料の消費量が少ないので、ガス代や灯油代や電気代など毎月の負担となる光熱費を節約することができます。
   また、待機電力も大幅に削減されるため、無駄な電力消費を抑えることもできます。 </p>
@@ -237,14 +236,14 @@ HEMSの仕組み
 </section>
 <!--kyuutousystem-->
 
-<section id="kyuutousystem_ecocute" class="clearfix anchor">
-  <h2>給湯システム（エコキュート）</h2>
-  <h3>エコキュート</h3>
+<section id="kyuutousystem_ecocute" class="zeh_point anchor">
+  <h2 class="ttl">給湯システム（エコキュート）</h2>
+  <h3 class="ttl mb-4">エコキュート</h3>
   <p> エコキュートとは、空気の熱を利用してお湯を沸かす、地球環境への負荷をおさえたヒートポンプ式の自然冷媒（CO2）家庭用給湯システムです。<br>
     夜間の電力で効率良くお湯を沸かすのでとても省エネです。<br>
     そして火を使わないため安心、快適です。</p>
-  <figure class="w100 maxw-890 mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/kyuutousystem_ecocute001.webp" alt="エコキュート図説"/> </figure>
-  <h4 class="ttl brackets2">エコキュートのメリット</h4>
+  <figure class="w100  mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/kyuutousystem_ecocute001.webp" alt="エコキュート図説"/> </figure>
+  <h4 class="ttl brackets2 bold mb-3">エコキュートのメリット</h4>
   <h5 class="ttl brackets">光熱費が安い</h5>
   <p>少ないエネルギーで効率的にお湯を沸かし、主に夜間の割安な電力を使うため、ガス給湯器を使う場合と比べてランニングコストが割安！<br>
     また、電気エネルギーだけでお湯をわかすのに比べ、消費電力量は約1/3に低減し、とても経済的！</p>
@@ -260,30 +259,30 @@ HEMSの仕組み
 </section>
 <!--ecocute-->
 
-<section id="kyuutousystem_ecoj" class="clearfix anchor">
-  <h2 class="title " >給湯システム（エコジョーズ）</h2>
+<section id="kyuutousystem_ecoj" class="zeh_point anchor">
+  <h2 class="ttl">給湯システム（エコジョーズ）</h2>
   <p> 「エコジョーズ」は、少ないガス量で効率よくお湯を沸かす省エネ性の高い給湯器です。<br>
     ご家庭のエネルギー消費のうち、約3分の1が「給湯」です。<br>
     そのお湯をつくる際に発生する高温の熱を、従来のように空気中に捨てるのではなく、回収して再びお湯をつくるのに活用することにより、省エネ効果が生まれます。 </p>
   <p> <?php echo (get_option('profile_shop_name')) ?>では、環境に配慮し、家計にうれしい「エコジョーズ」を標準仕様としています。 </p>
-  <h3 class="" >エコジョーズの特徴</h3>
-  <h4 class="ttl brackets2">エコジョーズ</h4>
-  <figure class="w100 maxw-890 mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/kyuutousystem_ecoj001.webp" alt="「高効率」いままで捨てられていた排気熱を再利用することで従来は80％だった給湯効率が95％に向上。"> </figure>
-  <figure class="w100 maxw-890 mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/kyuutousystem_ecoj002.webp" alt="「節約」熱効率がアップするので使うガスの量は13％削減"> </figure>
-  <figure class="w100 maxw-890 mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/kyuutousystem_ecoj003.webp" alt="「環境性」従来型と比べCO2排出量は13％削減"> </figure>
+  <h3 class="ttl mb-4">エコジョーズの特徴</h3>
+  <h4 class="ttl brackets2 bold mb-3">エコジョーズ</h4>
+  <figure class="w100  mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/kyuutousystem_ecoj001.webp" alt="「高効率」いままで捨てられていた排気熱を再利用することで従来は80％だった給湯効率が95％に向上。"> </figure>
+  <figure class="w100  mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/kyuutousystem_ecoj002.webp" alt="「節約」熱効率がアップするので使うガスの量は13％削減"> </figure>
+  <figure class="w100  mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/kyuutousystem_ecoj003.webp" alt="「環境性」従来型と比べCO2排出量は13％削減"> </figure>
   <p >《エコジョーズ》により、家庭にも地球にも優しい暮らしを実現できます！！</p>
 </section>
 <!--kyuutousystem_ecoj-->
 
-<section id="kyuutousystem_enefa" class="clearfix anchor">
-  <h2 class="title " >給湯システム（エネファーム）</h2>
-  <h3>【給湯システム（エネファーム）】</h3>
+<section id="kyuutousystem_enefa" class="zeh_point anchor">
+  <h2 class="ttl">給湯システム（エネファーム）</h2>
+  <h3 class="ttl brackets mb-3">給湯システム（エネファーム）</h3>
   <p> 「エネファーム」はガスを使って発電し、発電時に発生する熱を使って、お湯も一緒につくり出すとってもエコなシステムです。<br>
     家の中では、エネファームがつくった電気は家電製品や照明などに使い、お湯は給湯に使用されます。つまり、電気をつくる場所と使う場所が同じなので、エネルギーを無駄なく使える、環境にやさしいシステムなのです。<br>
     <?php echo (get_option('profile_shop_name')) ?>では、環境に配慮し、生活が豊かになる「エネファーム」を標準仕様としています。 </p>
-  <figure class="w100 maxw-890 mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/kyuutousystem_enefa001.webp" alt="エネファームの仕組み
+  <figure class="w100  mx-auto mb-4 mb-sm-5"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/kyuutousystem_enefa001.webp" alt="エネファームの仕組み
 "> </figure>
-  <h3 class="ttl brackets2" >エネファームのメリット</h3>
+  <h3 class="ttl brackets2 bold mb-3" >エネファームのメリット</h3>
   <h5 class="ttl brackets">快適な設備</h5>
   <p> お風呂から床暖房、ミストサウナまで。エネファームで豊かで生活空間を実現！ </p>
   <h5 class="ttl brackets">環境に配慮</h5>
@@ -293,5 +292,4 @@ HEMSの仕組み
     効率的に発電して、しっかり節電することで、電気代を大幅カット！ </p>
   <p class="txt-l">《エネファーム》により、<span class="red">家庭にも地球にも優しい暮らしを実現できます！！</span></p>
 </section>
-<!--kyuutousystem_enefa-->
-<?php get_template_part('include', 'reason');//選ばれる理由 ?>
+<!--kyuutousystem_enefa--> 

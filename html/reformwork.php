@@ -1,55 +1,59 @@
-
-<section id="reform-mizumawari" class="clearfix anchor">
+<section id="reform-mizumawari" class="anchor">
   <h2>水廻り</h2>
-  <h3 class="ttl mincho">工務店の水廻りリフォームはメリットがいっぱい！ </h3>
+  <p class="ttl my-4 bold txt-ll">工務店の水廻りリフォームはメリットがいっぱい！ </p>
   <figure class="w100 mx-auto mb-5"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/reform-mizumawari001.webp" alt="水廻りリフォームのイメージ"/> </figure>
-  <h4 class="ttl merit"> <span>メリット 1</span> 設備を新しく取り替えるだけじゃない！ </h4>
-  <p> 工務店で水廻りリフォームをする最大のメリットは、熟練の大工さんが水廻りの造作棚やカウンターなどの木を使った造作をしてくれることです。<br>
-    設備が新しくなるだけでも気持ちよく便利になりますが、さらに！カウンターや造作テーブル、飾り棚や食器棚など、お部屋のサイズと雰囲気にピッタリな造作ができます。<br>
-    我が家だけのオリジナルな水廻りをつくりたい方に工務店での水廻りリフォームはおすすめなのです。 </p>
-  <hr>
-  <h4 class="ttl merit"> <span>メリット 2</span> 素敵な照明でおしゃれなインテリアに </h4>
-  <p> インテリアにこだわるなら照明の演出はとっても大切です。<br>
-    造作壁を取付けて間接照明にするような工夫は、設備交換だけのリフォームでは味わえない醍醐味です。せっかく木工事をするなら、造作壁の裏側に照明を付けるなど、こだわりの演出のある水廻りリフォームをしてみてはいかがでしょうか。 </p>
-  <hr>
-  <h4 class="ttl merit"> <span>メリット 3</span> 構造材の劣化も見逃しません </h4>
-  <p> 私たちが地域密着工務店として最優先していることは、建物の耐久性です。<br>
-    建物が劣化している状態ならば、それを最優先に修繕するべきだと考えています。<br>
-    水廻りは特に湿気が多く構造材の劣化が起こりやすい場所です。<br>
-    単に設備だけを交換するのではなく、建物の状況も考慮して水廻りリフォームをいたします。 </p>
-  <hr>
-  <h4 class="ttl merit"> <span>メリット 4</span> より良い快適性をご提案します </h4>
-  <p> ご家族の日々の暮らしをもっと快適にするために、利便性に加えて快適性のご提案もいたします。断熱の知識に優れている私たちは、冬は暖かく、夏は涼しい快適なお部屋をつくることができます。<br>
-    便利になっても冬の寒い中で料理をしたりお風呂に入ったりするのは大変です。<br>
-    水廻りは居室に比べて外気に近い温度になりやすいですが、断熱工事を施すと、居室も水廻りも家中どこでも温度差のない快適な暮らしができます。<br>
-    利便性だけでなく快適性も考慮した水廻りリフォームをいたします。 </p>
-  <hr>
-  <h4 class="ttl merit"> <span>メリット 5</span> お困り事にすぐにかけつけます </h4>
-  <div class="row">
-    <div class="col-sm-8">
-      <p>
-      <p>住まいのことでお困り事がございましたら地域密着工務店の私たちがすぐにかけつけます。<br>
-        水漏れや扉の開閉の不具合など、すぐに解決できる安心をご提供いたします。</p>
-      <p>お値段以上の安心と利便性と快適性をご提供いたします。</p>
-      <p>まずは現状調査と無料見積りをご依頼ください。</p>
-      <p>※強引なセールス行為はございませんのでご安心ください。<br>
-        無料見積りを見てご要望にそえない場合は遠慮なくお断りいただき、次の機会にまたご依頼ください。 </p>
-      </p>
-    </div>
-    <div class="col-sm-4">
-      <figure class="w100">  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/reform-mizumawari002@2x.webp" alt="お困り事にすぐにかけつけます "/> </figure>
+  <h3 class="ttl my-3 merit"> <span>メリット 1</span> 設備を新しく取り替えるだけじゃない！ </h3>
+  <div class="pl-3 pl-sm-4 pb-4">
+    <p>工務店で水廻りリフォームをする最大のメリットは、熟練の大工さんが水廻りの造作棚やカウンターなどの木を使った造作をしてくれることです。<br>
+      設備が新しくなるだけでも気持ちよく便利になりますが、さらに！カウンターや造作テーブル、飾り棚や食器棚など、お部屋のサイズと雰囲気にピッタリな造作ができます。<br>
+      我が家だけのオリジナルな水廻りをつくりたい方に工務店での水廻りリフォームはおすすめなのです。 </p>
+  </div>
+  <h3 class="ttl my-3 merit"> <span>メリット 2</span> 素敵な照明でおしゃれなインテリアに </h3>
+  <div class="pl-3 pl-sm-4 pb-4">
+    <p> インテリアにこだわるなら照明の演出はとっても大切です。<br>
+      造作壁を取付けて間接照明にするような工夫は、設備交換だけのリフォームでは味わえない醍醐味です。せっかく木工事をするなら、造作壁の裏側に照明を付けるなど、こだわりの演出のある水廻りリフォームをしてみてはいかがでしょうか。 </p>
+  </div>
+  <h3 class="ttl my-3 merit"> <span>メリット 3</span> 構造材の劣化も見逃しません </h3>
+  <div class="pl-3 pl-sm-4 pb-4">
+    <p> 私たちが地域密着工務店として最優先していることは、建物の耐久性です。<br>
+      建物が劣化している状態ならば、それを最優先に修繕するべきだと考えています。<br>
+      水廻りは特に湿気が多く構造材の劣化が起こりやすい場所です。<br>
+      単に設備だけを交換するのではなく、建物の状況も考慮して水廻りリフォームをいたします。 </p>
+  </div>
+  <h3 class="ttl my-3 merit"> <span>メリット 4</span> より良い快適性をご提案します </h3>
+  <div class="pl-3 pl-sm-4 pb-4">
+    <p> ご家族の日々の暮らしをもっと快適にするために、利便性に加えて快適性のご提案もいたします。断熱の知識に優れている私たちは、冬は暖かく、夏は涼しい快適なお部屋をつくることができます。<br>
+      便利になっても冬の寒い中で料理をしたりお風呂に入ったりするのは大変です。<br>
+      水廻りは居室に比べて外気に近い温度になりやすいですが、断熱工事を施すと、居室も水廻りも家中どこでも温度差のない快適な暮らしができます。<br>
+      利便性だけでなく快適性も考慮した水廻りリフォームをいたします。 </p>
+  </div>
+  <h3 class="ttl my-3 merit"> <span>メリット 5</span> お困り事にすぐにかけつけます </h3>
+  <div class="pl-3 pl-sm-4 pb-4">
+    <div class="row">
+      <div class="col-sm-8">
+        <p>
+        <p>住まいのことでお困り事がございましたら地域密着工務店の私たちがすぐにかけつけます。<br>
+          水漏れや扉の開閉の不具合など、すぐに解決できる安心をご提供いたします。</p>
+        <p>お値段以上の安心と利便性と快適性をご提供いたします。</p>
+        <p>まずは現状調査と無料見積りをご依頼ください。</p>
+        <p class="indent-1">※強引なセールス行為はございませんのでご安心ください。</p>
+        <p>無料見積りを見てご要望にそえない場合は遠慮なくお断りいただき、次の機会にまたご依頼ください。 </p>
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <figure class="w100">  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/reform-mizumawari002@2x.webp" alt="お困り事にすぐにかけつけます "/> </figure>
+      </div>
     </div>
   </div>
-  <hr>
 </section>
 <!--reform-mizumawari-->
 
-<section id="reform-gaiheki_yane" class="clearfix anchor">
+<section id="reform-gaiheki_yane" class="anchor">
   <h2>外壁・屋根塗装</h2>
-  <h3 class="ttl mincho">断外壁塗装のメンテナンスも重要です</h3>
+  <h3 class="ttl my-4">断外壁塗装のメンテナンスも重要です</h3>
   <p> 外壁・屋根は、風雨や雪・紫外線・熱などの自然環境が発生させるダメージから住宅を守るという重要な役割を担っています。また、耐熱などの効果も含まれているので、室内の環境を保つ役割も担っています。<br>
     外壁・屋根を定期的にメンテナンスすることで、快適な暮らしを永く実現することができます。</p>
-  <figure class="w100 maxw-890 mx-auto mb-5"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/reform-gaiheki_yane001@2x.webp" alt="外壁・屋根塗装"/> </figure>
+  <figure class="w100 mx-auto mb-5"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/reform-gaiheki_yane001@2x.webp" alt="外壁・屋根塗装"/> </figure>
   <div class="row">
     <div class="col-sm-7">
       <h4 class="brackerts2 ttl">外壁・屋根塗装のメンテナンスポイント</h4>
@@ -88,13 +92,13 @@
     </div>
   </div>
 </section>
-<section id="reform-shoukouji" class="clearfix anchor">
+<section id="reform-shoukouji" class="anchor">
   <h2>小工事</h2>
-  <h3 class="mincho">小さな工事もご依頼ください</h3>
+  <h3 class="ttl my-4">小さな工事もご依頼ください</h3>
   <p>地域密着工務店として、みなさまの暮らしのお困り事を解決いたします。<br>
     当社でお建てした建物ではなくてもご依頼いただけます。<br>
     地域の信用できる工務店として、お住まいをしっかりと維持修繕し、安心できる暮らしをご提供いたします。</p>
-  <figure class="w100 maxw-890 mx-auto mb-5"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/reform-shoukouji001@2x.webp"  alt="リフォーム小工事のイメージ"/> </figure>
+  <figure class="w100 mx-auto mb-5"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/reform-shoukouji001@2x.webp"  alt="リフォーム小工事のイメージ"/> </figure>
   <h4 class="ttl point"> <span> Point 1 </span> 地域密着だから迅速対応 </h4>
   <p><?php echo get_option('profile_shop_name'); ?>では、当社から自転車で行ける距離を施工可能エリアとしております。
     水漏れやガラス割れなど、緊急性の高い工事もお任せください。</p>
@@ -154,6 +158,8 @@
     みなさまが次回もお気軽にご依頼いただけますように、毎月ニュースレターをお送りいたします。暮らしのお困り事がございましたら、いつでもお気軽にご依頼ください。</p>
   </p>
 </section>
-<!--reform-shoukouji--> 
+<!--reform-shoukouji-->
 
-
+</div>
+<div>
+<?php get_template_part('include', 'reason');//選ばれる理由 ?>

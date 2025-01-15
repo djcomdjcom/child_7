@@ -1,112 +1,105 @@
 <?php
 // WP_Query
 $args = array(
-  'post_type'      => 'page',
-  'name'           => 'home',
+  'post_type' => 'page',
+  'name' => 'home',
   'posts_per_page' => 1,
-  'no_found_rows'  => true,
+  'no_found_rows' => true,
 );
 
-$the_query = new WP_Query($args);
+$the_query = new WP_Query( $args );
 
-if ($the_query->have_posts()) :
-  while ($the_query->have_posts()) : $the_query->the_post();
+if ( $the_query->have_posts() ):
+  while ( $the_query->have_posts() ): $the_query->the_post();
 
-    // ここに該当のコードを挿入
-    ?>
+// ここに該当のコードを挿入
+?>
+<section id="home-reason" class="py-3 py-md-4 mb-5 mx-fit outerwrap">
+  <div class="wrapper container">
+    <header class="content_header my-5">
+      <h2 class="ttl mincho center">選ばれる理由</h2>
+    </header>
+    <?php
+    $page_obj = get_page_by_path( 'home' );
+    $page = get_post( $page_obj );
+    $reason_items = SCF::get( 'reason', $page->ID );
 
-    <section id="home-reason" class="pt-3 py-md-4 mb-5 mx-fit outerwrap">
-      <div class="wrapper container">
-        <header class="content_header my-5">
-          <h2 class="ttl mincho center">選ばれる理由</h2>
-        </header>
+    if ( $reason_items ) {
+      $counter = 1; // カウンター変数を初期化
+      echo '<ul class="reason-items px-3 row justify-content-center text-sm-center">';
+      foreach ( $reason_items as $fields ) {
+        if ( !empty( $fields[ 'rsn_ttl' ] ) ) {
+          echo '<li class="reason-item d-flex d-sm-block justify-content-around py-2 py-sm-5 reason-item_' . sprintf( "%03d", $counter ) . ' ';
+          if ( post_custom( 'rsn_box_css' ) ) {
+            echo post_custom( 'rsn_box_css' );
+          }
+          echo '">';
 
-        <?php
-        $page_obj = get_page_by_path('home');
-        $page = get_post($page_obj);
-        $reason_items = SCF::get('reason', $page->ID);
+          echo '<span class="item_bg ';
 
-        if ($reason_items) {
-          $counter = 1; // カウンター変数を初期化
-          echo '<ul class="reason-items px-3 row justify-content-center text-sm-center">';
-          foreach ($reason_items as $fields) {
-            if (!empty($fields['rsn_ttl'])) {
-              echo '<li class="reason-item d-flex d-sm-block justify-content-around pb-5 pt-3 pt-sm-5 reason-item_' . sprintf("%03d", $counter) . ' ';
-              if ( post_custom( 'rsn_box_css' ) ){
-                echo post_custom( 'rsn_box_css' );
-              }
-              echo '">';
-				
-echo '<span class="item_bg ';
+          if ( !empty( $fields[ 'rsn_box_bg_css' ] ) ) {
+            echo $fields[ 'rsn_box_bg_css' ];
+          }
 
-if (!empty($fields['rsn_box_bg_css'])) {
-    echo $fields['rsn_box_bg_css'];
-}
+          echo '" style="';
 
-echo '" style="';
+          if ( !empty( $fields[ 'rsn_border_color' ] ) || !empty( $fields[ 'rsn_bg_color' ] ) || !empty( $fields[ 'rsn_bg_img' ] ) ) {
+            echo 'border-color:' . $fields[ 'rsn_border_color' ] . '; ';
 
-if (!empty($fields['rsn_border_color']) || !empty($fields['rsn_bg_color']) || !empty($fields['rsn_bg_img'])) {
-    echo 'border-color:' . $fields['rsn_border_color'] . '; ';
-
-    if (!empty($fields['rsn_bg_img'])) {
-        $image_url = wp_get_attachment_url($fields['rsn_bg_img']);
-        echo 'background: url(' . $image_url . '); ';
-    } elseif (!empty($fields['rsn_bg_color'])) {
-        echo 'background:' . $fields['rsn_bg_color'] . '; ';
-    }
-}
-
-echo '"></span>';
-				
-
-              // カスタムフィールド 'rsn_ttl' の値を取得
-              $rsn_ttl = $fields['rsn_ttl'];
-
-              // ショートコードを実行してカスタムフィールドの値を表示
-              $rsn_ttl = do_shortcode($rsn_ttl);
-
-              // カスタムフィールド 'rsn_text_color' の値を取得
-              $rsn_text_color = $fields['rsn_text_color'];
-
-              if (!empty($fields['rsn_icon'])) {
-                echo '<figure class="icon align-self-center mb-0 mb-sm-3" ';
-                if (!empty($fields['rsn_icon_color'])) {
-                  echo 'style="color:', $fields['rsn_icon_color'], '"';
-                }
-                echo '>';
-                echo nl2br($fields['rsn_icon']), '</figure>';
-              }
-				
-				
-				
-              // フィールドを表示
-              echo '<p class="rsn_ttl align-self-center mb-0 mb-sm-4"';
-              echo ' style="color:', esc_attr($rsn_text_color), '"';
-              echo '>';
-              echo nl2br(esc_html($rsn_ttl)), '</p>';
-              echo '<a class="arrow btn" href="' . $fields['rsn_link'] . '" style="';
-
-              if (!empty($fields['rsn_btn_color']) || !empty($fields['rsn_btn_textcolor'])) {
-                echo 'color:' . $fields['rsn_btn_textcolor'] . '; background-color:' . $fields['rsn_btn_color'] . '; ', '';
-              }
-
-              echo '">', '詳しくはこちら</a>';
-
-
-              echo '</li>';
-              $counter++; // カウンターをインクリメント
+            if ( !empty( $fields[ 'rsn_bg_img' ] ) ) {
+              $image_url = wp_get_attachment_url( $fields[ 'rsn_bg_img' ] );
+              echo 'background: url(' . $image_url . '); ';
+            } elseif ( !empty( $fields[ 'rsn_bg_color' ] ) ) {
+              echo 'background:' . $fields[ 'rsn_bg_color' ] . '; ';
             }
           }
-          echo '</ul>';
+
+          echo '"></span>';
+
+
+          // カスタムフィールド 'rsn_ttl' の値を取得
+          $rsn_ttl = $fields[ 'rsn_ttl' ];
+
+          // ショートコードを実行してカスタムフィールドの値を表示
+          $rsn_ttl = do_shortcode( $rsn_ttl );
+
+          // カスタムフィールド 'rsn_text_color' の値を取得
+          $rsn_text_color = $fields[ 'rsn_text_color' ];
+
+          if ( !empty( $fields[ 'rsn_icon' ] ) ) {
+            echo '<figure class="icon align-self-center mb-0 mb-sm-3" ';
+            if ( !empty( $fields[ 'rsn_icon_color' ] ) ) {
+              echo 'style="color:', $fields[ 'rsn_icon_color' ], '"';
+            }
+            echo '>';
+            echo nl2br( $fields[ 'rsn_icon' ] ), '</figure>';
+          }
+
+
+          // フィールドを表示
+          echo '<p class="rsn_ttl align-self-center mb-0 mb-sm-4 pr-5 pr-sm-0"';
+          echo ' style="color:', esc_attr( $rsn_text_color ), '"';
+          echo '>';
+          echo nl2br( esc_html( $rsn_ttl ) ), '</p>';
+          echo '<a class="" href="' . $fields[ 'rsn_link' ] . '" >';
+          echo '<span class="btn arrow" style="';
+          if ( !empty( $fields[ 'rsn_btn_color' ] ) || !empty( $fields[ 'rsn_btn_textcolor' ] ) ) {
+            echo 'color:' . $fields[ 'rsn_btn_textcolor' ] . '; background-color:' . $fields[ 'rsn_btn_color' ] . '; ', '';
+          }
+          echo '">詳しくはこちら</span></a>';
+
+
+          echo '</li>';
+          $counter++; // カウンターをインクリメント
         }
+      }
+      echo '</ul>';
+    }
 
-        edit_post_link(__('Edit'), '');
-        ?>
-
-      </div>
-    </section>
-
-
+    edit_post_link( __( 'Edit' ), '' );
+    ?>
+  </div>
+</section>
 <style>
 	
 <?php if ( post_custom('rsnset_bg_img') ) :?>
@@ -174,8 +167,9 @@ border-radius: <?php echo post_custom('rsnset_btn_radius');?> ;
 	<?php echo get_option('profile_shop_name');//屋号 ?>
 
 </style>
-  <?php endwhile; ?>
-<?php endif;
+<?php endwhile; ?>
+<?php
+endif;
 wp_reset_postdata();
 ?>
 <style>

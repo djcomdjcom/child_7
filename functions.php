@@ -640,8 +640,6 @@ add_action('manage_example_posts_custom_column', 'show_thumbnail_column_in_custo
 add_action('manage_reform_posts_custom_column', 'show_thumbnail_column_in_custom_post_types', 10, 2);
 
 
-
-
 add_action( 'init', 'cptui_register_my_cpts' );
 function menu_setup() {
     register_nav_menus( array(
@@ -656,6 +654,7 @@ function menu_setup() {
         'order-nav' => '注文住宅',
         'renov-nav' => 'リノベーション',
         'reform-nav' => 'リフォーム',
+        'about-nav' => '会社案内',
     ) );
 }
 add_action( 'after_setup_theme', 'menu_setup' );

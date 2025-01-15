@@ -1,11 +1,6 @@
-
-
-
-<header class="entry-header">
-
-<h1 class="entry-title border-0"><span class="mincho">
+<header class="py-4"><h2 class="mb-4"><span class="mincho">
 100年住める快適な家
-</span></h1>
+</span></h2>
 </header>
 
 
@@ -21,9 +16,10 @@
 100年住める快適な家をあなたらしいデザインで設計施工いたします。
 </p>
 
-<figure class="w100">
-<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/order000.webp" alt=""/> </figure>
-
-
+<figure class="w100 mb-5">
+<img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/order000.webp" alt=""/>
+</figure>
+</div>
+<div>
 <?php get_template_part('include', 'reason');//選ばれる理由 ?>
 

@@ -209,7 +209,26 @@ left:calc(50vw - 620px );
 height: 70vh;
 	overflow: hidden;
 }
-}	
+}
+	
+	
+@media screen and (max-width: 767.98px) {
+	
+.post.slide-attachment .slide-text{
+top: 50%;
+transform: translateY(-50%);
+right:0;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+	padding: 2em 1em;
+	display: inline-block;
+	height:100%;
+	font-size: 3vh;
+/*	text-align: center;*/
+}
+	.post.slide-attachment .slide-text p{}
+	
+	}
 @media screen and (max-width: 575.98px) {
 /*
 .slider-wrap,

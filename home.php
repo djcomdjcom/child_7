@@ -40,9 +40,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
 <div id="home-slider" class="mx-fit">
   <?php get_template_part('hublogslider'); ?>
 </div>
-<div id="home-carousel" class="maxw-1100 mx-auto my-3 py-4 px-0 px-lg-5 mx-fit">
-  <?php get_template_part('inc', 'event_bnrs'); ?>
-</div>
+
 <style>
 /* フェードインさせる要素 */
 .effect {
@@ -59,11 +57,9 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
 <section id="home-concept" class="py-5 px-3 px-xl-0 mx-fit">
   <div class="inbox wrapper text-center pb-5 mt-5">
   <header id="home-concept-header" class="content_header">
-    <h2 class="ttl mincho center mb-4"><?php echo get_option('profile_shop_name');//屋号 ?>の<br class="d-sm-none">
-      家づくりとは</h2>
+    <h2 class="ttl mincho center mb-4"><?php echo get_option('profile_shop_name');//屋号 ?>の<br class="d-none">家づくりとは</h2>
   </header>
   <div class="text-center px-4 py-5 px-md-0">
-    <p class="ttl noicon ">CONCEPT</p>
     <p class="txt-ll mb-5 mincho"> リフォーム工事から<br class="d-sm-none">
       新築注文住宅まで<br>
       高性能住宅を重視し、省エネや快適性を追求した<br>
@@ -74,7 +70,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
       お客さまに最適なプランをご提案させていただいております。</p>
   </div>
   <section id="concept_item" class="">
-    <ul class="row nav-item justify-content-between p-0 mb-5">
+    <ul class="d-none row nav-item justify-content-between p-0 mb-5">
       <li class="col-12 col-md-6 col-lg-3 px-0 px-md-2 pb-md-2"> <a class="w100 btnshine" href="/concept#page_concept01" title="コンセプト「住んで健康になれる」">
         <?php
         $image_id = 10260; // メディアID
@@ -161,6 +157,9 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
   </section>
   
   <!--home-news-->
+	
+	
+	
   <section id="home-event" class="home-content wrapper py-4 py-md-5 ">
     <header class="content_header text-sm-center mb-3 mb-md-4">
       <h2 class="ttl mincho">近日イベントのご案内</h2>
@@ -170,6 +169,16 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
       'post_type' => 'post',
       'category_name' => 'event',
       'posts_per_page' => 4,
+		/*
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'category', //タクソノミーnews
+          'field' => 'slug',
+          'terms' => array( 'closed_event', 'event-closed' ), //ターム名
+          'operator' => 'NOT IN',
+        ),
+      ),		
+		*/
     );
     $the_query = new WP_Query( $args );
     if ( $the_query->have_posts() ):
@@ -182,9 +191,14 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
     <?php endif; wp_reset_postdata(); ?>
   </section>
   <!--home-event--> 
+	<hr>
+<div id="home-carousel" class="maxw-1100 mx-auto my-3 py-4 px-0 px-lg-5 mx-fit">
+  <?php get_template_part('inc', 'event_bnrs'); ?>
+</div>	
 </div>
 
 <!--▼▼▼選ばれる理由▼▼▼-->
+
 
 <?php get_template_part('include', 'reason');//選ばれる理由 ?>
 
@@ -224,7 +238,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
     <section id="home-staff" class="my-5 home-content">
       <header class="content_header text-sm-center mb-4 mb-md-5 ">
         <h2 class="ttl mincho">スタッフ紹介</h2>
-        <a class="to_index staff" href="/staff">More</a> </header>
+        <a class="to_index staff" href="/about/staff">More</a> </header>
       <div class="flexbox pb-4">
         <?php get_template_part('loop-authors'); ?>
         <div class="staff-list d-none"> <a class="w100" href="/recruit"><img class="pt-2 photo" alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff-topage.png"></a> </div>
