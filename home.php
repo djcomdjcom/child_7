@@ -40,7 +40,6 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
 <div id="home-slider" class="mx-fit">
   <?php get_template_part('hublogslider'); ?>
 </div>
-
 <style>
 /* フェードインさせる要素 */
 .effect {
@@ -57,7 +56,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
 <section id="home-concept" class="py-5 px-3 px-xl-0 mx-fit">
   <div class="inbox wrapper text-center pb-5 mt-5">
   <header id="home-concept-header" class="content_header">
-    <h2 class="ttl mincho center mb-4"><?php echo get_option('profile_shop_name');//屋号 ?>の<br class="d-none">家づくりとは</h2>
+    <h2 class="ttl mincho center mb-4"><?php echo get_option('profile_shop_name');//屋号 ?>の<br class="d-sm-none">家づくりとは</h2>
   </header>
   <div class="text-center px-4 py-5 px-md-0">
     <p class="txt-ll mb-5 mincho"> リフォーム工事から<br class="d-sm-none">
@@ -119,7 +118,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
           スタイル</span> </div>
         </a> </li>
     </ul>
-    <p class="btn  pill"> <a style="font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);" class="bg_key02 mx-auto" href="/concept">コンセプトページはこちら</a> </p>
+    <p class="btn to_detail pill"> <a class="col_bg_key05 mx-auto" href="/concept">コンセプトページはこちら</a> </p>
     </div>
   </section>
 </section>
@@ -157,9 +156,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
   </section>
   
   <!--home-news-->
-	
-	
-	
+  
   <section id="home-event" class="home-content wrapper py-4 py-md-5 ">
     <header class="content_header text-sm-center mb-3 mb-md-4">
       <h2 class="ttl mincho">近日イベントのご案内</h2>
@@ -169,16 +166,6 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
       'post_type' => 'post',
       'category_name' => 'event',
       'posts_per_page' => 4,
-		/*
-      'tax_query' => array(
-        array(
-          'taxonomy' => 'category', //タクソノミーnews
-          'field' => 'slug',
-          'terms' => array( 'closed_event', 'event-closed' ), //ターム名
-          'operator' => 'NOT IN',
-        ),
-      ),		
-		*/
     );
     $the_query = new WP_Query( $args );
     if ( $the_query->have_posts() ):
@@ -190,17 +177,13 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
     </div>
     <?php endif; wp_reset_postdata(); ?>
   </section>
-  <!--home-event--> 
-	<hr>
-<div id="home-carousel" class="maxw-1100 mx-auto my-3 py-4 px-0 px-lg-5 mx-fit">
-  <?php get_template_part('inc', 'event_bnrs'); ?>
-</div>	
+  <!--home-event-->
+  <hr>
 </div>
 
 <!--▼▼▼選ばれる理由▼▼▼-->
 
-
-<?php get_template_part('include', 'reason');//選ばれる理由 ?>
+<?php // get_template_part('include', 'reason');//選ばれる理由 ?>
 
 <!--　home-infoarea　▲▲▲インフォエリア▲▲▲-->
 
@@ -230,7 +213,37 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
   <div class="wrapper"> 
     
     <!--▼▼▼代表あいさつ▼▼▼-->
-    <section id="president" class="pb-5"> <a href="/message" class="w100"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hm-bnr-president@2x.webp" alt="代表あいさつ"/> </a> </section>
+    <section id="president" class="pb-5">
+      <header class="content_header text-sm-center mb-4 mb-md-5">
+        <h2 class="ttl mincho">代表あいさつ</h2>
+      </header>
+      <div class="row justify-content-between lh-20">
+        <figure class="w100 px-3 col-md-4 align-self-center order-md-2">
+          <?php
+          $image_id = 10848; // メディアID
+          $image_size = array( 600, 600, true ); // 画像サイズ
+          $alt_text = '代替テキスト'; // 任意のaltテキスト
+          $image_class = 'rounded'; // 任意のクラス名
+          $image_attributes = array(
+            'alt' => $alt_text,
+            'class' => $image_class,
+          );
+
+          $image = wp_get_attachment_image( $image_id, $image_size, false, $image_attributes );
+          if ( $image ) {
+            echo $image;
+          }
+          ?>
+        </figure>
+        <div class="col-md-7 align-self-center order-md-1">
+          <p class="txt-lll mincho lh-25">ただの建物を作るだけでなく<br>
+            お客様一人ひとりの想いを形にし<br>
+            心から満足いただける住まいをご提供することを<br>
+            使命としております。</p>
+          <p class="btn arrow pill"><a class="col_bg_key05" href="/about">続きを読む</a></p>
+        </div>
+      </div>
+    </section>
     
     <!--　home-greeting　▲▲▲代表あいさつ▲▲▲--> 
     <!--▼▼▼スタッフ紹介▼▼▼-->
@@ -262,28 +275,6 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
       <?php endwhile; ?>
     </div>
     <?php wp_reset_query(); ?>
-  </div>
-</section>
-<section id="hajimetenavi" class="navi text-center pt-4 pt-md-5 mb-5">
-  <header class="content_header wrapper container mb-4 mb-md-5">
-    <h2 class="ttl mincho">お客様の状況に応じて<br>
-      アクションをお選びください</h2>
-  </header>
-  <div class="wrapper container pb-5">
-    <ul class="row nav-item justify-content-between x-0 px-0 ">
-      <li class="col-sm-6 col-md-3 mb-1" ><a class="w100" href="/online_sumai"><img class="p-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hajimete_bnr-soudankai@2x.webp" alt="住まいの無料相談会">
-        <div class="nav-item-inner"> <span class="ttl mincho d-block">住まいの無料相談会</span> </div>
-        </a></li>
-      <li class="col-sm-6 col-md-3 mb-1" ><a class="w100" href="/online_meeting"><img class="p-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hajimete_bnr-ol_meet@2x.webp" alt="オンライン打ち合わせ">
-        <div class="nav-item-inner"> <span class="ttl mincho d-block">オンライン打ち合わせ</span></div>
-        </a></li>
-      <li class="col-sm-6 col-md-3 mb-1" ><a class="w100" href="/kenngakukai"><img class="p-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hajimete_bnr-kengakukai@2x.webp" alt="構造完成見学会">
-        <div class="nav-item-inner"> <span class="ttl mincho d-block">構造完成見学会</span></div>
-        </a></li>
-      <li class="col-sm-6 col-md-3 mb-1" ><a class="w100" href="/offer?title=<?php if ( is_home() || is_front_page() ) {  echo ('トップページ');} else {echo get_the_title();}?>"><img class="p-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hajimete_bnr-shiryou@2x.webp" alt="資料請求">
-        <div class="nav-item-inner"> <span class="ttl mincho d-block">資料請求</span></div>
-        </a></li>
-    </ul>
   </div>
 </section>
 <?php // get_template_part('include', 'contact'); ?>

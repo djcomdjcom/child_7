@@ -100,6 +100,9 @@ if ( $the_query->have_posts() ):
     ?>
   </div>
 </section>
+<?php endwhile; ?>
+
+
 <style>
 	
 <?php if ( post_custom('rsnset_bg_img') ) :?>
@@ -167,7 +170,6 @@ border-radius: <?php echo post_custom('rsnset_btn_radius');?> ;
 	<?php echo get_option('profile_shop_name');//屋号 ?>
 
 </style>
-<?php endwhile; ?>
 <?php
 endif;
 wp_reset_postdata();
