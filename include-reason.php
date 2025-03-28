@@ -15,7 +15,7 @@ if ( $the_query->have_posts() ):
 // ここに該当のコードを挿入
 ?>
 <section id="home-reason" class="py-3 py-md-4 mb-5 mx-fit outerwrap">
-  <div class="wrapper container">
+  <div class="wrapper">
     <header class="content_header my-5">
       <h2 class="ttl mincho center">選ばれる理由</h2>
     </header>

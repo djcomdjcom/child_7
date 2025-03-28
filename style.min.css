@@ -140,18 +140,20 @@ max-width: 1230px;
 	top: 50px;
 	transform: translateY( -50%);
 }
-
-#globalheader{
-z-index: 300;
-position: fixed;
-right: 0;
-left: 0;
-top: 0;
-margin-left: 3%;
-margin-right: 3%;
-margin-top:50px;
-transform: translateY(-50%);
+#globalheader { 
+  z-index: 300;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 50px;
+  transform: translateY(0);
+  transition: transform 0.3s ease; /* ← これを追加 */
 }
+
+
 #globalheader .sitetitle{
 	max-width: 120px;
 	width: 100%;
@@ -1945,14 +1947,25 @@ body.page-about .row figure img{
 	margin-right: auto;
 }
 #main > .builder_content header.builder_content_ttl{
-	padding: 1.5rem 0 0.5rem  1rem;
+	padding: 0;
 	position: relative;
 	margin-bottom:0;
 }
+
+#main > .builder_content .builder_content_ttl .entry-title{
+/*h1　非表示*/
+display: block;
+text-indent: 110%;
+overflow: hidden;
+white-space: nowrap;
+height: 3rem;
+}
+
 @media screen and (min-width: 768px) {
 #main > .builder_content header.builder_content_ttl{
-	padding-left: calc(clamp(11.25rem, 0.139rem + 23.15vw, 17.5rem) * 15 / 100 + 0.5rem - 1px);
+	padding: 1.5rem 0 0.5rem calc(clamp(11.25rem, 0.139rem + 23.15vw, 17.5rem) * 15 / 100 + 0.5rem - 1px);
 }
+
 }
 
 

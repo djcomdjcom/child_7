@@ -2,7 +2,7 @@
 /**
 template name: HOME
  * @テーマ名	hublog7
- * @更新日付	2024.09.20
+ * @更新日付	2025.03.25
  *
  */
 get_header();
@@ -30,7 +30,7 @@ jQuery(function($){
 
 /*.posts .post*/
 jQuery(function($){
-$('.posts .post.style-event').addClass('my-3 col-md-6 '); 
+$('.posts .post.style-event').addClass('my-3 col-sm-6 '); 
 $('.posts .post.style-inc_news .thumbnail').addClass('py-0 ');
 $('#home-blog .posts .post').addClass('col-sm-6 col-md-4 col-12');
 $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4'); 

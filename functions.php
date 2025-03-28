@@ -17,6 +17,67 @@
 //}
 
 
+// 子テーマ用の単独関数として書き直し
+add_filter( 'looppart', 'childtheme_get_post_is_in', 5 );
+
+function childtheme_get_post_is_in( $partname ) {
+
+  global $post;
+  if ( is_a( $post, 'WP_Post' ) ) {
+
+    $output = '';
+    if ( post_is_in_category_slug( 'sell' ) || post_is_in_taxonomy_slug( 'sell', 'bukken' ) ) {
+      $output = 'bukken';
+    } elseif ( post_is_in_category_slug( 'rent' ) || post_is_in_taxonomy_slug( 'rent', 'bukken' ) ) {
+      $output = 'bukken';
+    } elseif ( post_is_in_category_slug( 'tatemono' ) || post_is_in_taxonomy_slug( 'tatemono', 'bukken' ) ) {
+      $output = 'bukken';
+    } elseif ( post_is_in_category_slug( 'example' ) ) {
+      $output = 'example';
+    } elseif ( post_is_in_category_slug( 'reform' ) ) {
+      $output = 'reform';
+    } elseif ( post_is_in_category_slug( 'event' ) ) {
+      $output = 'event';
+    } elseif ( post_is_in_category_slug( 'component' ) ) {
+      $output = 'component';
+    } elseif ( is_post_type_archive( 'example' ) || is_post_type_archive( 'work' ) ) {
+      $output = 'example';
+    } elseif ( is_tax( 'ex_cat' ) || is_tax( 'wcase' ) ) {
+      $output = 'example';
+    } elseif ( is_post_type_archive( 'reform' ) ) {
+      $output = 'reform';
+    } elseif ( is_tax( 'reform_cat' ) ) {
+      $output = 'reform';
+    } elseif ( post_is_in_category_slug( 'voice' ) ) {
+      $output = 'voice';
+    } elseif ( is_post_type_archive( 'voice' ) ) {
+      $output = 'voice';
+    } elseif ( is_tax( 'voice_cat' ) ) {
+      $output = 'voice';
+    } elseif ( is_post_type_archive( 'video' ) ) {
+      $output = 'video';
+    } elseif ( is_tax( 'video_cat' ) ) {
+      $output = 'video';
+    } elseif ( $post_cats = wp_get_post_categories( $post->ID ) ) {
+      $post_id = get_the_ID();
+      if ( $post_id ) {
+        $post_cats = wp_get_post_categories( $post_id );
+        if ( !empty( $post_cats ) ) {
+          $c = get_category( array_shift( $post_cats ) );
+          $output = $c->slug;
+        }
+      }
+    }
+
+    if ( empty( $output ) ) {
+      return $partname;
+    } else {
+      return $output;
+    }
+  }
+}
+
+
 function customize_menus() {
     global $menu;
     $menu[ 19 ] = $menu[ 10 ]; //メディアの移動
@@ -318,46 +379,6 @@ function cptui_register_my_cpts() {
 
     register_post_type( "voice", $args );
 
-
-    /**
-     * Post Type: コラム.
-     */
-
-    $labels = [
-        "name" => esc_html__( "コラム", "custom-post-type-ui" ),
-        "singular_name" => esc_html__( "コラム", "custom-post-type-ui" ),
-    ];
-
-    $args = [
-        "label" => esc_html__( "コラム", "custom-post-type-ui" ),
-        "labels" => $labels,
-        "description" => "",
-        "public" => true,
-        "publicly_queryable" => true,
-        "show_ui" => true,
-        "show_in_rest" => true,
-        "rest_base" => "",
-        "rest_controller_class" => "WP_REST_Posts_Controller",
-        "rest_namespace" => "wp/v2",
-        "has_archive" => false,
-        "show_in_menu" => true,
-        "show_in_nav_menus" => true,
-        "delete_with_user" => false,
-        "exclude_from_search" => false,
-        "capability_type" => "post",
-        "map_meta_cap" => true,
-        "hierarchical" => false,
-        "can_export" => false,
-        "rewrite" => [ "slug" => "column", "with_front" => true ],
-        "query_var" => true,
-        "menu_position" => 3,
-        "menu_icon" => "dashicons-admin-customizer",
-        "supports" => [ "title", "editor", "thumbnail", "excerpt", "custom-fields", "revisions", "author" ],
-        "taxonomies" => [ "column_cat" ],
-        "show_in_graphql" => false,
-    ];
-
-    register_post_type( "column", $args );
 }
 
 add_action( 'init', 'cptui_register_my_cpts' );
@@ -481,38 +502,7 @@ function cptui_register_my_taxes() {
     );
     register_taxonomy( "bnr_type", array( "event_bnr" ), $args );
 
-    /**
-     * Taxonomy: コラムカテゴリー.
-     */
 
-    $labels = [
-        "name" => esc_html__( "コラムカテゴリー", "custom-post-type-ui" ),
-        "singular_name" => esc_html__( "コラムカテゴリー", "custom-post-type-ui" ),
-    ];
-
-
-    $args = [
-        "label" => esc_html__( "コラムカテゴリー", "custom-post-type-ui" ),
-        "labels" => $labels,
-        "public" => true,
-        "publicly_queryable" => true,
-        "hierarchical" => true,
-        "show_ui" => true,
-        "show_in_menu" => true,
-        "show_in_nav_menus" => true,
-        "query_var" => true,
-        "rewrite" => [ 'slug' => 'column_cat', 'with_front' => true, 'hierarchical' => true, ],
-        "show_admin_column" => true,
-        "show_in_rest" => true,
-        "show_tagcloud" => false,
-        "rest_base" => "column_cat",
-        "rest_controller_class" => "WP_REST_Terms_Controller",
-        "rest_namespace" => "wp/v2",
-        "show_in_quick_edit" => true,
-        "sort" => true,
-        "show_in_graphql" => false,
-    ];
-    register_taxonomy( "column_cat", [ "column" ], $args );
 }
 
 add_action( 'init', 'cptui_register_my_taxes' );
@@ -745,11 +735,27 @@ function wpcf7_validate_kana( $result, $tag ) {
 //ショートコードでphpファイルを呼び出し
 function my_php_Include( $params = array() ) {
     extract( shortcode_atts( array( 'file' => 'default' ), $params ) );
+    
+    // ファイルのパスを取得
+    $child_file_path = STYLESHEETPATH . "/$file.php"; // 子テーマのファイル
+    $parent_file_path = TEMPLATEPATH . "/$file.php";  // 親テーマのファイル
+
+    // 子テーマにファイルがあればそちらを使い、なければ親テーマを参照
+    if (file_exists($child_file_path)) {
+        $file_path = $child_file_path;
+    } elseif (file_exists($parent_file_path)) {
+        $file_path = $parent_file_path;
+    } else {
+        return "<!-- Error: File '$file.php' not found in child or parent theme -->";
+    }
+
+    // ファイルをインクルード
     ob_start();
-    include( STYLESHEETPATH . "/$file.php" );
+    include( $file_path );
     return ob_get_clean();
 }
 add_shortcode( 'myphp', 'my_php_Include' );
+
 
 
 //公開期限設定

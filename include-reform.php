@@ -5,7 +5,7 @@
     <a class="to_index grid" href="/reform/" title="リフォーム事例一覧ページヘのリンク">一覧</a> </header>
   <script>
 jQuery(function($){
-$('#home-reform .posts .post.style-example').addClass('col-6 col-md-4');
+$('#home-reform .posts .post.style-example').addClass('col-sm-6 col-md-4');
 });
 </script>
   <?php
@@ -25,7 +25,7 @@ $('#home-reform .posts .post.style-example').addClass('col-6 col-md-4');
 	  
     <?php if (is_home()||is_front_page()) :?>
     <article class="post-<?php the_ID(); ?> style-example post p-3 linkarea">
-      <picture title="<?php the_title_attribute( array( 'before' => '施工事例「', 'after' => '」詳細ページへ' ) ); ?>" class="thumbnail">
+      <picture title="<?php the_title_attribute( array( 'before' => 'リフォーム事例「', 'after' => '」詳細ページへ' ) ); ?>" class="thumbnail">
       <?php if ( is_new( WHATSNEW_TTL ) ) : ?>
       <span title="新着" class="tmb-icon new">NEW</span>
       <?php endif; ?>
