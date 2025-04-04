@@ -93,6 +93,8 @@ font-family: 'Arial', 'Helvetica', "sans-serif"
 --col_key05:#836752;/*ボタン*/
 --col_text_main: #454545;
 --col_text_link: #3C3835;
+--hdr-height	:100px;
+--hdr-height-sm	:60px;
 --font_mincho: 'Noto Serif JP', serif;
 
 }
@@ -145,11 +147,10 @@ max-width: 1230px;
   position: fixed;
   right: 0;
   left: 0;
-  top: 0;
+  top:calc( var(--hdr-height) * 0.5 );
   margin-left: 3%;
   margin-right: 3%;
-  margin-top: 50px;
-  transform: translateY(0);
+  transform: translateY(-50%);
   transition: transform 0.3s ease; /* ← これを追加 */
 }
 
@@ -183,11 +184,11 @@ backdrop-filter:blur( 5px );
 -webkit-backdrop-filter: blur(5px);
 */
 width: 100%;
-height: 100px;
+height: var(--hdr-height);
 z-index: 299;
 }
 #header {
-padding-top: 100px;
+padding-top:var(--hdr-height);
 }
 #headnav{
 	margin-right: 50px;
@@ -366,16 +367,16 @@ vertical-align: top;
 @media screen and (max-width: 767.98px) {
 
 #header:before {
-height: 60px;
+height:  var(--hdr-height-sm);
 }
 #header {
-	padding-top: 60px;
+	padding-top:  var(--hdr-height-sm);
 }
 #wrapper .btn-gnavi{
 	top: 25px;
 }
 #globalheader {
-	margin-top: 30px;
+  top:calc(  var(--hdr-height-sm) * 0.5 );
 }
 #globalheader .sitetitle .to_home{
 	max-width: 100px;
@@ -1771,12 +1772,18 @@ display: none;
 
 #main .entry-content h2{
 	font-size: clamp(1.25rem, 1rem + 1.25vw, 2rem);
+	margin-bottom: 1em;
+	margin-top: 1em;
 }
 #main .entry-content h3{
 	font-size:clamp(1.25rem, 1.125rem + 0.63vw, 1.625rem);
+	margin-bottom: 1em;
+	margin-top: 1em;
 }
 #main .entry-content h4{
 	font-size: clamp(1.063rem, 1rem + 0.31vw, 1.25rem);
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
 }
 #main .entry-content h2,
 #main .entry-content h3,
@@ -2023,7 +2030,7 @@ margin-left:clamp(-3rem, -1 * (0.273rem + 3.64vw), -1rem);
 }
 #main > .builder_content .left_nav.fixed{
 	position: fixed;
-		top: 100px;
+		top:var(--hdr-height);
 		opacity: 1;
 		visibility: visible;
 	transition: .3s;
@@ -2159,7 +2166,7 @@ margin-bottom: 0;
 top: -2rem;
 }
 #main > .builder_content .left_nav.fixed{
-top: 60px;
+top: var(--hdr-height-sm);
 right: 0;
 left: 0;
 }
@@ -2537,3 +2544,6 @@ color: #fff;
     line-height: 2.0;
   }
 }
+
+
+
