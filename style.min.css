@@ -1989,7 +1989,14 @@ height: 3rem;
 	content: none;
 }
 
-.hentry.builder_content .entry-content dl.flow dt,
+.hentry.builder_content .entry-content dl.flow dt{
+margin-top: 1.5rem;
+margin-bottom: 2rem;
+border-bottom: 1px solid #ccc;
+padding-bottom: 1rem;
+font-family: var(--font_mincho);
+
+}
 .hentry.builder_content .entry-content section:not(#home-reason) h2,
 #main.page-template-htmlpage_about .entry-content h2{
 margin-top: 1.5rem;
@@ -1997,17 +2004,13 @@ margin-bottom: 2rem;
 border-bottom: 1px solid #ccc;
 padding-bottom: 1rem;
 font-family: var(--font_mincho);
+padding-left:clamp(1rem, 0.273rem + 3.64vw, 3rem);
+margin-left:clamp(-3rem, -1 * (0.273rem + 3.64vw), -1rem);
 }
 .hentry.builder_content  .entry-content  h3{
 font-family: var(--font_mincho);
 }
-.hentry.builder_content  .entry-content dl.flow dt,
-.hentry.builder_content  .entry-content .inbox,
-/*.hentry.builder_content  .entry-content section:not(#home-reason) h2,*/
-#main.page-template-htmlpage_about .entry-content h2{
-padding-left:clamp(1rem, 0.273rem + 3.64vw, 3rem);
-}
-/*.hentry.builder_content  .entry-content section:not(#home-reason) h2,*/
+.hentry.builder_content  .entry-content section:not(#home-reason) h2,
 #main.page-template-htmlpage_about .entry-content h2{
 margin-left:clamp(-3rem, -1 * (0.273rem + 3.64vw), -1rem);
 }
@@ -2016,6 +2019,17 @@ margin-left:clamp(-3rem, -1 * (0.273rem + 3.64vw), -1rem);
 }
 .hentry.builder_content  .entry-content dl.flow dd{
 	padding-bottom: 2rem;
+}
+.hentry.builder_content  .entry-content section:not(#home-reason) h2.ttl.point,
+.hentry.builder_content  .entry-content section:not(#home-reason) h3.ttl.point{
+	margin-left:0;
+	padding-left: 7rem;
+	text-indent: 0;
+}
+
+.hentry.builder_content  .entry-content section:not(#home-reason) h2.ttl.point > span,
+.hentry.builder_content  .entry-content section:not(#home-reason) h3.ttl.point > span{
+	margin-left:-7rem;
 }
 
 

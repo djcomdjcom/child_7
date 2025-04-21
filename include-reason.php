@@ -102,9 +102,16 @@ if ( $the_query->have_posts() ):
 </section>
 <?php endwhile; ?>
 
-
+<?php if ( is_page('reason') ) :?>
+<script>
+jQuery(function($){
+$('#home-reason .reason-item').removeClass('col-md-3').addClass('col-md-4 '); 
+$('#home-reason > .wrapper').removeClass('wrapper'); 
+});		
+</script>
+<?php endif;?>
 <style>
-	
+
 <?php if ( post_custom('rsnset_bg_img') ) :?>
 .reason-items .reason-item .item_bg{
 	background-image: : url( <?php echo post_custom('rsnset_bg_img');?>) ;
@@ -153,7 +160,7 @@ color:<?php echo post_custom('rsnset_icon_color');?> ;}
 <?php endif;?>
 
 <?php if ( post_custom('rsnset_btn_textcolor') ) :?>
-.reason-items .reason-item a.btn{color:<?php echo post_custom('rsnset_btn_textcolor');?> ;}
+.reason-items .reason-item a .btn{color:<?php echo post_custom('rsnset_btn_textcolor');?> ;}
 <?php endif;?>
 	
 <?php if ( post_custom('rsnset_cell_border') ) :?>

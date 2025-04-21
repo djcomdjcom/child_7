@@ -1,24 +1,24 @@
 <?php
 /**
  * looppart-inc_blog.php
- * @テーマ名	hublog4
+ * @テーマ名	hublog7
  */
 ?>
-<article id="post-<?php the_ID(); ?>"  class="post clearfix style-inc_blog linkarea">
+<article id="post-<?php the_ID(); ?>"  class="post clearfix pt-2 style-inc_blog linkarea">
   <?php if ( is_new( WHATSNEW_TTL ) ) : ?>
   <span class="tmb-icon new">新着</span>
   <?php endif; ?>
-  <span href="<?php if(post_custom('events-page_url')) :?><?php echo(post_custom('events-page_url')) ;?>" target="_blank<?php else :?><?php the_permalink(); ?><?php endif;?>" title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>" class="thumbnail"> <span class="attachment">
-  <?php
-  if ( function_exists( 'the_post_image' ) ) {
-    if ( the_post_image( array( 400, 400 ) ) === false ) {
-      ?>
-  <img src="<?php echo get_template_image('noimage');?>" width="120" height="120" alt="<?php the_title(); ?>" />
-  <?php
-  }
-  }
-  ?>
-  </span> </span>
+  <figure href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => 'お客様の声「', 'after' => '」詳細ページへ' ) ); ?>" class="thumbnail"> <span class="attachment">
+    <?php
+    if ( function_exists( 'the_post_image' ) ) {
+      if ( the_post_image( 'medium' ) === false ) {
+        ?>
+    <span class="noimg"></span>
+    <?php
+    }
+    }
+    ?>
+    </span> </figure>
   <div class="metabox"> <span class="date py-2">
     <?php the_time('Y/n/j') ?>
     </span>
