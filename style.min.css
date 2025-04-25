@@ -38,49 +38,8 @@ html body{
 /*font-family: 'Noto Sans JP', sans-serif;*/
 /*font-family: 'Noto Serif JP', serif;*/
 font-family: "游ゴシック体",YuGothic,"游ゴシック Medium",Yu Gothic Medium,"游ゴシック",Yu Gothic,"メイリオ",sans-serif;
-color:#454545;
+color:var(--col_text_main);
 font-weight: 400;
-}
-
-#main{
-font-size: clamp(0.813rem, 0.744rem + 0.34vw, 1rem);
-}
-/*
-h1,h2,h3,h4,h5,h6,.gothic{
-font-family: 'Noto Sans JP', sans-serif;
-color: #222;
-}
-*/
-.over_btn .todetail a{
-position: absolute;
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
-display: block;
-padding: 0 !important;
-overflow: hidden;
-text-indent: -150%;
-white-space: nowrap;
-border: 0 !important;
-}
-.mincho{
-font-family: 'Noto Serif JP', serif;
-font-feature-settings: "palt" 1;
-letter-spacing: 0.1em;
-
-}
-a,
-#headnav ul li a,
-.home-menu a:link,
-.home-menu a:visited{
-color: #3C3835;
-}
-body.home #breadcrumb{
-display: none;
-}
-.telnum{
-font-family: 'Arial', 'Helvetica', "sans-serif"
 }
 
 /*BRAND*/
@@ -95,7 +54,7 @@ font-family: 'Arial', 'Helvetica', "sans-serif"
 --col_text_link: #3C3835;
 --hdr-height	:100px;
 --hdr-height-sm	:60px;
---font_mincho: 'Noto Serif JP', serif;
+--font_serif: 'Noto Serif JP', serif;
 
 }
 .col_key01{
@@ -128,6 +87,49 @@ font-family: 'Arial', 'Helvetica', "sans-serif"
 background: var(--col_key04);
 }
 
+
+
+#main{
+font-size: clamp(0.813rem, 0.744rem + 0.34vw, 1rem);
+}
+/*
+h1,h2,h3,h4,h5,h6,.gothic{
+font-family: 'Noto Sans JP', sans-serif;
+color: #222;
+}
+*/
+.over_btn .todetail a{
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+display: block;
+padding: 0 !important;
+overflow: hidden;
+text-indent: -150%;
+white-space: nowrap;
+border: 0 !important;
+}
+.serif,
+.mincho{
+font-family:var(--font_serif);
+font-feature-settings: "palt" 1;
+letter-spacing: 0.1em;
+
+}
+a,
+#headnav ul li a,
+.home-menu a:link,
+.home-menu a:visited{
+color: #3C3835;
+}
+body.home #breadcrumb{
+display: none;
+}
+.telnum{
+font-family: 'Arial', 'Helvetica', "sans-serif"
+}
 
 
 /*ラッパー最大幅*/
