@@ -1,5 +1,5 @@
 <header class="py-4">
-<h2 class="mincho mb-4">ライフスタイルに合わせた<br>リノベーション</h2>
+<h2 class=" mb-4">ライフスタイルに合わせた<br>リノベーション</h2>
 </header>
 
 <div class="text-left">

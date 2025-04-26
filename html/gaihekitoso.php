@@ -3,7 +3,7 @@
 </header>
 <h1 class="tweak01">外壁塗装の経年劣化</h1>
 <section id="gaihekitoso01" class="clearfix anchor">
-  <h2 class="mincho">現状の外壁に問題ございませんか？</h2>
+  <h2 class="">現状の外壁に問題ございませんか？</h2>
   <p>外壁塗装は、塗装後に月日が経過すると塗装の劣化が生じるものです。<br>
 
 外壁塗装により、建物の見た目の印象をよくするのはもちろんですが、単に建物の見映えを良くするだけではありません。建物の寿命を延ばし、安全・快適に暮らすためにも重要な働きを担っています。<br>
@@ -13,7 +13,7 @@
 </section>
 <!--gaihekitoso01-->
 <section id="gaihekitoso02" class="clearfix anchor">
-  <h2 class="mincho">外壁の劣化原因は？</h2>
+  <h2 class="">外壁の劣化原因は？</h2>
   <div class="row mb-5">
     <div class="col-sm-6 col-12">
       <h3 class="ttl checked">強い日差し（紫外線や熱によるもの）</h3>
@@ -58,7 +58,7 @@
 </section>
 <!--gaihekitoso02-->
 <section id="gaihekitoso03" class="clearfix anchor">
-  <h2 class="mincho">外壁塗装のタイミング</h2>
+  <h2 class="">外壁塗装のタイミング</h2>
 <p class="mb-5">
 一般的に、外壁塗装をおこなうタイミングは、「１０年が目安」と言われています。<br>
 １０年が経たずとも、外壁に劣化が進んでいる場合、塗装をお勧めします。<br>
@@ -100,7 +100,7 @@
 
 <section id="gaihekitoso04" class="clearfix anchor">
 
-	<h2 class="mincho">飛び込み営業にはご注意を！！！</h2>
+	<h2 class="">飛び込み営業にはご注意を！！！</h2>
   <div class="row">
     <div class="col-sm-6">
 		

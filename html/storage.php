@@ -1,7 +1,7 @@
 <div id="topinfo" class="page_header storage mb-5"> <span class="d-block"></span> </div>
 <h1 class="tweak01">収納</h1>
 <section id="storage01" class="clearfix anchor">
-  <h2 class="mincho">現状の収納にお困りございませんか？</h2>
+  <h2 class="">現状の収納にお困りございませんか？</h2>
   <p> 使いやすい収納を考える際のポイントは、ご自分やご家族のライフスタイルにフィットしているかどうかに注目することです。<br>
     そして、「どこに何を置くのか」定義を決め、収納のイメージを考えることが大切です。<br>
     注文住宅、リノベーションの際やリフォームで家の中の整理整頓を強化したい場合、「収納」はどうすればいいのか？お悩みになると思います。<br>
@@ -10,7 +10,7 @@
 </section>
 <!--storage01-->
 <section id="storage02" class="clearfix anchor">
-  <h2 class="mincho">造作収納とは・・・・</h2>
+  <h2 class="">造作収納とは・・・・</h2>
   <div class="row mb-5">
     <div class="col-sm-6 col-12">
       <p> 既製品の家具ではなく、大工がつくるオーダーメイドの造り付けの収納のことです。<br>
@@ -22,7 +22,7 @@
 <!--storage02-->
 
 <section id="storage03" class="clearfix anchor">
-  <h2 class="mincho">造作収納のメリット</h2>
+  <h2 class="">造作収納のメリット</h2>
   <dl class="check">
     <dt> 空間の有効活用</dt>
     <dd> 造作収納は空間にあわせてサイズも細かく調整できるので、家の中のちょっとした隙間や無駄を利用して、空間を余すところなく最大限に活用できます。 </dd>
@@ -37,7 +37,7 @@
 <!--storage03-->
 
 <section id="storage04" class="clearfix anchor">
-  <h2 class="mincho">造作収納の収納例</h2>
+  <h2 class="">造作収納の収納例</h2>
   <p>収納場所をしっかりと考えた上で間取りを考えて家を建てたはずなのに、生活し始めると、不便な箇所か見つかってしまう・・・・
     ということが多々あります。</p>
   <p class="mb-5"> その原因は、便利で使い勝手がいい収納でも、自分たちの暮らしにフィットしていなければ使いこなすことはできないからです。<br>
@@ -91,7 +91,7 @@
 <!--storage04-->
 
 <section id="storage05" class="clearfix anchor">
-  <h2 class="mincho">ご要望にお応えします！</h2>
+  <h2 class="">ご要望にお応えします！</h2>
   <div class="row">
     <div class="col-12 col-sm-6">
       <p>弊社では、お客様のご要望を叶える家づくりはもちろんのことですが、家の雰囲気、お住まいの暮らしに合ったオーダーメイドのオリジナル造作収納を、大工がひとつひとつ手作業で制作します。</p>

@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import url('css/font.css');
+
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -22,24 +24,24 @@ font-display: swap;
   -moz-font-feature-settings: 'liga';
   -moz-osx-font-smoothing: grayscale;
 }
-/*
-@font-face {
-src: url("font/NotoSansJP-Medium.woff") format("woff");
-font-family: "Noto Sans JP";
-font-display: swap;
-}
-@font-face {
-src: url("font/NotoSerifJP-Medium.woff") format("woff");
-font-family: "Noto Serif JP";
-font-display: swap;
-}
-*/
 html body{
-/*font-family: 'Noto Sans JP', sans-serif;*/
-/*font-family: 'Noto Serif JP', serif;*/
-font-family: "游ゴシック体",YuGothic,"游ゴシック Medium",Yu Gothic Medium,"游ゴシック",Yu Gothic,"メイリオ",sans-serif;
+font-family: 'Noto Sans JP', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 color:var(--col_text_main);
 font-weight: 400;
+}
+.slide-text {
+	font-family: var(--font_serif);
+}
+
+.serif,
+.mincho{
+font-family:var(--font_serif);
+font-feature-settings: "palt" 1;
+letter-spacing: 0.1em;
+}
+
+.telnum{
+font-family: 'Arial', 'Helvetica', "sans-serif"
 }
 
 /*BRAND*/
@@ -111,13 +113,6 @@ text-indent: -150%;
 white-space: nowrap;
 border: 0 !important;
 }
-.serif,
-.mincho{
-font-family:var(--font_serif);
-font-feature-settings: "palt" 1;
-letter-spacing: 0.1em;
-
-}
 a,
 #headnav ul li a,
 .home-menu a:link,
@@ -126,9 +121,6 @@ color: #3C3835;
 }
 body.home #breadcrumb{
 display: none;
-}
-.telnum{
-font-family: 'Arial', 'Helvetica', "sans-serif"
 }
 
 
@@ -1050,7 +1042,13 @@ color: #fff;
 .posts .post{
 	position: relative;
 }
-
+.noimg::before {
+  background:
+url("images/sitetitle.webp") no-repeat center;
+    background-size: auto;
+  background-size: 50%;
+  filter: grayscale(10%) opacity(40%);
+}
 /*HOME-EXAMPLE*/
 
 /*POST EXAMPLE　REFORM　VOICE*/
@@ -1553,35 +1551,7 @@ max-width: none;
 		color: #595757;
 	} 
 }
-/*HOME-BOUT*/
 
-
-
-#home-about {
-	overflow-x: hidden;
-}
-#home-about .content_header{
-    background: url("images/hm-about-bg@2x.jpg") center;
-	background-size: cover;
-	color: #fff;
-	padding:1.5rem 0 0.5rem;
-}
-.aboveright.arrow.toindex{
-	text-align: center;
-}
-.aboveright.arrow.toindex a{
-	color: #3C3835;
-	text-decoration: none;
-}
-
-@media screen and (min-width:1200px) {
-
-.aboveright.arrow.toindex{
-	position: absolute;
-	right: 0;
-	top: 2rem;
-}
-}
 
 
 /*ABOUT*/
@@ -1763,8 +1733,6 @@ font-style: normal;
 font-size: 0.9em;
 margin-bottom: 0.5em;;
 }
-
-
 body.home .user_info input[type="checkbox"]:checked + .staffpopup{
 display: none;
 }
@@ -1791,8 +1759,7 @@ display: none;
 #main .entry-content h3,
 #main .entry-content h4,
 #main .entry-content h5,
-#main .entry-content h5{
-/*font-family: 'Noto Serif JP', serif;*/
+#main .entry-content h6{
 font-feature-settings: "palt" 1;
 }
 

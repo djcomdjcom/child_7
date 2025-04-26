@@ -105,7 +105,7 @@ $(".slider-wrap")
 <?php if ( post_custom('slideimage_filter_css') ) :?>
 <span class="color_filter" style="<?php echo SCF::get('slideimage_filter_css');?>"></span>
 <?php endif;?>
-    <div class="slide-text mincho">
+    <div class="slide-text ">
       <?php the_content(); ?>
     </div>
     <?php if  (post_custom('slide_url')):?>

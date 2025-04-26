@@ -14,7 +14,7 @@
 <!--ohikiwatashi-flow01-->
 <section id="ohikiwatashi-flow02" class="anchor">
   <dl class="flow">
-    <dt><span class="txt-l mincho">近隣ご挨拶 </span></dt>
+    <dt><span class="txt-l ">近隣ご挨拶 </span></dt>
     <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
@@ -27,7 +27,7 @@
         </div>
       </div>
     </dd>
-    <dt><span class="txt-l mincho"> 既存建物の解体 </span></dt>
+    <dt><span class="txt-l "> 既存建物の解体 </span></dt>
     <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
@@ -41,7 +41,7 @@
         </div>
       </div>
     </dd>
-    <dt><span class="txt-l mincho"> 地鎮祭 </span></dt>
+    <dt><span class="txt-l "> 地鎮祭 </span></dt>
     <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
@@ -54,7 +54,7 @@
         </div>
       </div>
     </dd>
-    <dt><span class="txt-l mincho"> 地盤調査・地盤改良 </span></dt>
+    <dt><span class="txt-l "> 地盤調査・地盤改良 </span></dt>
     <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
@@ -68,7 +68,7 @@
         </div>
       </div>
     </dd>
-    <dt><span class="txt-l mincho"> 基礎工事 </span></dt>
+    <dt><span class="txt-l "> 基礎工事 </span></dt>
     <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
@@ -84,7 +84,7 @@
         </div>
       </div>
     </dd>
-    <dt><span class="txt-l mincho"> 上棟・上棟式 </span></dt>
+    <dt><span class="txt-l "> 上棟・上棟式 </span></dt>
     <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
@@ -101,7 +101,7 @@
         </div>
       </div>
     </dd>
-    <dt><span class="txt-l mincho"> 木工事・構造見学会 </span></dt>
+    <dt><span class="txt-l "> 木工事・構造見学会 </span></dt>
     <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
@@ -116,7 +116,7 @@
         </div>
       </div>
     </dd>
-    <dt><span class="txt-l mincho"> 設備取付け工事 </span></dt>
+    <dt><span class="txt-l "> 設備取付け工事 </span></dt>
     <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
@@ -128,7 +128,7 @@
         </div>
       </div>
     </dd>
-    <dt><span class="txt-l mincho"> 使い勝手検討会・内部仕上げ工事 </span></dt>
+    <dt><span class="txt-l "> 使い勝手検討会・内部仕上げ工事 </span></dt>
     <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
@@ -142,7 +142,7 @@
         </div>
       </div>
     </dd>
-    <dt><span class="txt-l mincho"> 外構工事・完成見学会 </span></dt>
+    <dt><span class="txt-l "> 外構工事・完成見学会 </span></dt>
     <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
@@ -159,7 +159,7 @@
         </div>
       </div>
     </dd>
-    <dt><span class="txt-l mincho"> 登記の準備 </span></dt>
+    <dt><span class="txt-l "> 登記の準備 </span></dt>
     <dd class="inbox">
       <p>登記には建物表題登記（表示登記）と保存登記があります。<br>
         住宅ローンの契約に担保設定が必要なため、引き渡し前に登記の準備に入ります。<br>
@@ -174,7 +174,7 @@
         登記記録上では、権利部の甲区（登記記録の不動産の所有権に関する事項を記載した部分）に「所有権保存　所有者A」のように記載されます。<br>
         所有権の保存の登記をすることができるのは、原則として、表題部所有者です（不動産登記法第74条）。</p>
     </dd>
-    <dt><span class="txt-l mincho"> オーナー引き渡し検査・お引渡し・取り扱い説明会 </span></dt>
+    <dt><span class="txt-l "> オーナー引き渡し検査・お引渡し・取り扱い説明会 </span></dt>
     <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
@@ -188,7 +188,7 @@
         </div>
       </div>
     </dd>
-    <dt><span class="txt-l mincho"> お引越し </span></dt>
+    <dt><span class="txt-l "> お引越し </span></dt>
     <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">
@@ -203,7 +203,7 @@
         </div>
       </div>
     </dd>
-    <dt><span class="txt-l mincho"> ヒアリングとアドバイス（住まい方勉強会） </span></dt>
+    <dt><span class="txt-l "> ヒアリングとアドバイス（住まい方勉強会） </span></dt>
     <dd class="inbox">
       <div class="row">
         <div class="col-sm-7">

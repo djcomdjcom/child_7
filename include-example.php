@@ -56,7 +56,7 @@ jQuery(function($){
 <section id="home-example" class="home-content py-4 my-4 py-md-5 my-md-5 mx-fit">
 <header class="content_header text-sm-center wrapper px-3 px-md-0 mb-3 mb-md-4 block">
 
-<h2 class="ttl mincho">注文住宅施工事例</h2>
+<h2 class="ttl ">注文住宅施工事例</h2>
 <a class="to_index grid pr-3 pr-xl-0 " href="/example/" title="注文住宅施工事例一覧ページヘのリンク">一覧</a>
 </header>
 <div class="multiple-items owl-theme posts py-3 block">
@@ -79,7 +79,7 @@ jQuery(function($){
     <a class="btnshine example-item-inner" href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => '施工事例「', 'after' => '」詳細ページへ' ) ); ?>">
     <div class="inbox">
       <?php // get_template_part('cat_icon');//カテゴリーアイコン ?>
-      <span class="ttl mincho">
+      <span class="ttl ">
       <?php the_title(); ?>
       </span> <span class="date">
       <?php the_time('Y/n/j') ?>

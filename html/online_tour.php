@@ -3,7 +3,7 @@
 </header>
 <h1 class="tweak01">オンライン見学会</h1>
 <section id="online_tour01" class="clearfix anchor">
-<h2 class="mincho">オンライン見学会を実施しています</h2>
+<h2 class="">オンライン見学会を実施しています</h2>
 <p>オンライン見学会とは、ご自宅に居ながら自分の都合の良い時間にパソコンまたはスマートフォン、タブレット等で工務店の造った家が詳しい解説付きでLive配信により見られる見学会です。</p>
 <p> オンライン見学会では、画面を通して弊社スタッフがお客様のご希望に合わせて移動し、対話形式で外観や室内をご案内いたします。<br>
   また、住まいづくりや土地探しに関してのご質問やご相談にもお答えします。</p>
@@ -18,7 +18,7 @@
 <!--online_tour01-->
 
 <section id="online_tour02" class="clearfix anchor">
-  <h2 class="mincho">こんな方に、おすすめです！</h2>
+  <h2 class="">こんな方に、おすすめです！</h2>
   <ul class="check">
     <li>小さいお子さまがいたり、仕事が忙しくて会場までお越しになれない方</li>
     <li>自宅から気軽にご見学したい方</li>
@@ -29,7 +29,7 @@
 </section>
 <!--online_tour02-->
 <section id="online_tour03" class="clearfix anchor">
-  <h2 class="mincho">オンライン見学会までの流れ</h2>
+  <h2 class="">オンライン見学会までの流れ</h2>
 	
 	
   <div class="online_tour-step step01 text-center">

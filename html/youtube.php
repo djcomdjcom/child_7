@@ -26,7 +26,7 @@ query_posts( array(
 	
 	
 	<header class="video_cat-ttl center">
-<h3 class=" noicon mincho txt-ll">
+<h3 class=" noicon  txt-ll">
 <?php echo $term->name; ?></h3>    
 
 <p><?php echo (wpautop ($term->description)); ?>		

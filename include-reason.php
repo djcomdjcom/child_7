@@ -17,7 +17,7 @@ if ( $the_query->have_posts() ):
 <section id="home-reason" class="py-3 py-md-4 mb-5 mx-fit outerwrap">
   <div class="wrapper">
     <header class="content_header my-5">
-      <h2 class="ttl mincho center">選ばれる理由</h2>
+      <h2 class="ttl  center">選ばれる理由</h2>
     </header>
     <?php
     $page_obj = get_page_by_path( 'home' );

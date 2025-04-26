@@ -1,4 +1,4 @@
-<header class="py-4"><h2 class="mb-4"><span class="mincho">
+<header class="py-4"><h2 class="mb-4"><span class="">
 100年住める快適な家
 </span></h2>
 </header>

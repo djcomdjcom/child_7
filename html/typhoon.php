@@ -3,7 +3,7 @@
 </header>
 <h1 class="tweak01">台風対策</h1>
 <section id="typhoon01" class="clearfix anchor">
-  <h2 class="mincho">台風対策は、万全ですか？「家」の現状確認は、お済みですか？</h2>
+  <h2 class="">台風対策は、万全ですか？「家」の現状確認は、お済みですか？</h2>
   <p>台風によって</p>
   <ul>
     <li>急に雨漏りが始まった・・・</li>
@@ -14,7 +14,7 @@
 </section>
 <!--typhoon01-->
 <section id="typhoon02" class="clearfix anchor">
-  <h2 class="mincho">台風に備えた「家」の点検箇所</h2>
+  <h2 class="">台風に備えた「家」の点検箇所</h2>
   <div class="row mb-5">
     <div class="col-sm-6 col-12">
       <dl class="check">
@@ -49,7 +49,7 @@
 </section>
 <!--typhoon02-->
 <section id="typhoon03" class="clearfix anchor">
-  <h2 class="mincho">台風に備えた「家」の修繕・補強工事</h2>
+  <h2 class="">台風に備えた「家」の修繕・補強工事</h2>
   <div class="row">
     <div class="col-sm-6">
       <dl class="check">
@@ -77,7 +77,7 @@
 
 <section id="typhoon04" class="clearfix anchor">
 
-	<h2 class="mincho">ご注意ください！！！リフォームの訪問営業</h2>
+	<h2 class="">ご注意ください！！！リフォームの訪問営業</h2>
   <div class="row">
     <div class="col-sm-6">
 		
@@ -139,7 +139,7 @@
 
 <section id="typhoon04" class="clearfix anchor">
 
-	<h2 class="mincho">台風後の被害のご対応</h2>
+	<h2 class="">台風後の被害のご対応</h2>
   <div class="row">
     <div class="col-sm-6">
 

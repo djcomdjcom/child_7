@@ -56,10 +56,10 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
 <section id="home-concept" class="py-5 px-3 px-xl-0 mx-fit">
   <div class="inbox wrapper text-center pb-5 mt-5">
   <header id="home-concept-header" class="content_header">
-    <h2 class="ttl mincho center mb-4"><?php echo get_option('profile_shop_name');//屋号 ?>の<br class="d-sm-none">家づくりとは</h2>
+    <h2 class="ttl  center mb-4"><?php echo get_option('profile_shop_name');//屋号 ?>の<br class="d-sm-none">家づくりとは</h2>
   </header>
   <div class="text-center px-4 py-5 px-md-0">
-    <p class="txt-ll mb-5 mincho"> リフォーム工事から<br class="d-sm-none">
+    <p class="txt-ll mb-5 "> リフォーム工事から<br class="d-sm-none">
       新築注文住宅まで<br>
       高性能住宅を重視し、省エネや快適性を追求した<br>
       「住んで健康になれる」家づくりを提供しています。</p>
@@ -79,7 +79,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
           echo $image;
         }
         ?>
-        <div class="nav-item-inner"> <span class="ttl mincho d-block">住んで健康になれる家</span> </div>
+        <div class="nav-item-inner"> <span class="ttl  d-block">住んで健康になれる家</span> </div>
         </a> </li>
       <li class="col-12 col-md-6 col-lg-3 px-0 px-md-2 pb-md-2"> <a class="w100 btnshine" href="/concept#page_concept01" title="コンセプト「自社職人と自社施工」">
         <?php
@@ -90,7 +90,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
           echo $image;
         }
         ?>
-        <div class="nav-item-inner"> <span class="ttl mincho d-block">自社職人<br>
+        <div class="nav-item-inner"> <span class="ttl  d-block">自社職人<br>
           自社施工</span> </div>
         </a> </li>
       <li class="col-12 col-md-6 col-lg-3 px-0 px-md-2 pb-md-2"> <a class="w100 btnshine" href="/concept#page_concept01" title="コンセプト「耐震性・耐久性断熱効果の高い家」">
@@ -102,7 +102,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
           echo $image;
         }
         ?>
-        <div class="nav-item-inner"> <span class="ttl mincho d-block">耐震性・耐久性<br>
+        <div class="nav-item-inner"> <span class="ttl  d-block">耐震性・耐久性<br>
           断熱効果の高い家</span> </div>
         </a> </li>
       <li class="col-12 col-md-6 col-lg-3 px-0 px-md-2 pb-md-2"> <a class="w100 btnshine" href="/concept#page_concept01" title="コンセプト「ゼロエネルギースタイル」">
@@ -114,7 +114,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
           echo $image;
         }
         ?>
-        <div class="nav-item-inner"> <span class="ttl mincho d-block">ゼロエネルギー<br>
+        <div class="nav-item-inner"> <span class="ttl  d-block">ゼロエネルギー<br>
           スタイル</span> </div>
         </a> </li>
     </ul>
@@ -135,7 +135,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
 <div id="home-infoarea" class=" wrapper container mx-auto px-0 mb-5 ">
   <section id="home-news" class="home-content pt-5 pb-4 mb-4 mb-md-5 px-0 px-md-3 mx-auto">
     <header class="content_header text-sm-center mb-3 mb-md-4 maxw-1000 mx-auto">
-      <h2 class="ttl mincho">ニュース<span class="txt-s">＆</span>トピックス</h2>
+      <h2 class="ttl ">ニュース<span class="txt-s">＆</span>トピックス</h2>
       <a class="to_index" href="/category/news" title="ニュース＆トピックス一覧ページヘのリンク">一覧</a> </header>
     <?php
     $args = array(
@@ -159,7 +159,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
   
   <section id="home-event" class="home-content wrapper py-4 py-md-5 ">
     <header class="content_header text-sm-center mb-3 mb-md-4">
-      <h2 class="ttl mincho">近日イベントのご案内</h2>
+      <h2 class="ttl ">近日イベントのご案内</h2>
       <a class="to_index" href="/category/event" title="イベント情報">一覧</a> </header>
     <?php
     $args = array(
@@ -189,7 +189,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
 
 <section id="home-voice" class="home-content wrapper py-4 py-md-5 ">
   <header class="content_header text-sm-center mb-3 mb-md-4">
-    <h2 class="ttl mincho">お客様の声</h2>
+    <h2 class="ttl ">お客様の声</h2>
     <a class="to_index" href="/voice/" title="お客様の声">一覧</a> </header>
   <?php
   $args = array(
@@ -215,7 +215,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
     <!--▼▼▼代表あいさつ▼▼▼-->
     <section id="president" class="pb-5">
       <header class="content_header text-sm-center mb-4 mb-md-5">
-        <h2 class="ttl mincho">代表あいさつ</h2>
+        <h2 class="ttl ">代表あいさつ</h2>
       </header>
       <div class="row justify-content-between lh-20">
         <figure class="w100 px-3 col-md-4 align-self-center order-md-2">
@@ -236,7 +236,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
           ?>
         </figure>
         <div class="col-md-7 align-self-center order-md-1">
-          <p class="txt-lll mincho lh-25">ただの建物を作るだけでなく<br>
+          <p class="txt-lll  lh-25">ただの建物を作るだけでなく<br>
             お客様一人ひとりの想いを形にし<br>
             心から満足いただける住まいをご提供することを<br>
             使命としております。</p>
@@ -250,7 +250,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
     
     <section id="home-staff" class="my-5 home-content">
       <header class="content_header text-sm-center mb-4 mb-md-5 ">
-        <h2 class="ttl mincho">スタッフ紹介</h2>
+        <h2 class="ttl ">スタッフ紹介</h2>
         <a class="to_index staff" href="/about/staff">More</a> </header>
       <div class="flexbox pb-4">
         <?php get_template_part('loop-authors'); ?>
@@ -266,7 +266,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
 <section id="home-blog" class="home-content mx-fit outerwrap mb-5">
   <div class="wrapper container py-4 py-md-5 ">
     <header class="content_header text-sm-center mb-4 mb-md-5">
-      <h2 class="ttl mincho">ブログ</h2>
+      <h2 class="ttl ">ブログ</h2>
       <a class="to_index" href="/category/blog">一覧</a> </header>
     <?php query_posts('category_name=blog&posts_per_page=3'); ?>
     <div class="posts row justify-content-start">

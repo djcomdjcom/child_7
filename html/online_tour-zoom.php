@@ -129,7 +129,7 @@
 <style>
     
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;700;900&family=Sawarabi+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;700;900&family=Sawarabi+&display=swap');
 
     
 #online_consult{

@@ -2,13 +2,13 @@
 
 <div class="inbox wrapper text-center pb-5 mt-5">
   <header id="home-concept-header" class="content_header">
-    <h2 class="ttl mincho center mb-4"><?php echo get_option('profile_shop_name');//屋号 ?>の<br class="d-none">家づくりとは</h2>
+    <h2 class="ttl  center mb-4"><?php echo get_option('profile_shop_name');//屋号 ?>の<br class="d-none">家づくりとは</h2>
   </header>
 	  
 	  
 <div class="text-center px-4 py-5 px-md-0">
 	
-  <p class=" lh-20 mincho"> 自社職人と自社施工を基盤として、<br>
+  <p class=" lh-20 "> 自社職人と自社施工を基盤として、<br>
     ひとつ一つの家づくりにこだわって施工しています。<br>
     大小に関わらずリフォーム工事には事前調査を細かくに行い、<br>
     お客さまに最適なプランをご提案させていただいております。</p>
@@ -17,7 +17,7 @@
 
 <div class="row story_set wrapper justify-content-between mx-auto px-0 pb-4 mb-5">
   <div class="text-cell lh-25 px-0 pb-4 p-sm-5 col-sm-9 order-2 order-sm-1 align-self-top mt-sm-4">
-    <h2 class="mincho my-4 mb-md-5">住んで健康になれる<br>
+    <h2 class=" my-4 mb-md-5">住んで健康になれる<br>
       健康志向の家</h2>
     <div class="">
       <p> <?php echo get_option('profile_shop_name');//屋号 ?>の家づくりは<br class="d-none d-md-block">
@@ -37,7 +37,7 @@
     <figure class="w100"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/page_concept02_001@2x.webp" alt="自社職人と自社施工"> </figure>
   </div>
   <div class="text-cell lh-25 px-0 pb-4 p-sm-5 col-sm-9 align-self-top mt-sm-4">
-    <h2 class="mincho my-4 mb-md-5">自社職人と<br>
+    <h2 class=" my-4 mb-md-5">自社職人と<br>
       自社施工</h2>
     <div class="">
       <p> 自社職人であり自社施工を基盤としてひとつ一つの家づくりにこだわり<br class="d-none d-md-block">
@@ -52,7 +52,7 @@
 
 <div class="row story_set wrapper justify-content-between mx-auto px-0 pb-4 mb-5">
   <div class="text-cell lh-25 px-0 pb-4 p-sm-5 col-sm-9 order-2 order-sm-1 align-self-top mt-sm-4">
-    <h2 class="mincho my-4 mb-md-5">耐震性・耐久性<br>
+    <h2 class=" my-4 mb-md-5">耐震性・耐久性<br>
         断熱効果の高いの家</h2>
     <div class="">
       <p>木造住宅ではLIXILのスーパーウォール工法を採用し<br class="d-none d-md-block">
@@ -71,7 +71,7 @@
     <figure class="w100"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/page_concept04_001@2x.webp" alt="ゼロエネルギー住宅"> </figure>
   </div>
   <div class="text-cell lh-25 px-0 pb-4 p-sm-5 col-sm-9 align-self-top mt-sm-4">
-    <h2 class="mincho my-4 mb-md-5">ゼロエネルギー住宅</h2>
+    <h2 class=" my-4 mb-md-5">ゼロエネルギー住宅</h2>
     <div class="">
       <p>太陽光発電システムを設置することで<br class="d-none d-md-block">
         ご家庭の光熱費を節約でき、省エネ意識を高めます<br>
