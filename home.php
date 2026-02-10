@@ -194,7 +194,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
   <?php
   $args = array(
     'post_type' => 'voice',
-    'posts_per_page' => 4,
+    'posts_per_page' => 3,
   );
   $the_query = new WP_Query( $args );
   if ( $the_query->have_posts() ):

@@ -927,8 +927,8 @@ color: #595757;
 	position: absolute;
 	left: 0.5rem;
 	right: 0.5rem;
-	top: 0rem;
-	bottom: 0rem;
+	top: 0.5rem;
+	bottom: 0.5rem;
 	border-radius: 0.4rem;
 }
 
@@ -1044,10 +1044,12 @@ color: #fff;
 }
 .noimg::before {
   background:
-url("images/sitetitle.webp") no-repeat center;
-    background-size: auto;
-  background-size: 50%;
-  filter: grayscale(10%) opacity(40%);
+url("images/sitetitle.webp") no-repeat center #eee;
+background-size: auto;
+background-size: 50%;
+filter: grayscale(10%) opacity(40%);
+border: none;
+outline-offset: inherit;
 }
 /*HOME-EXAMPLE*/
 
@@ -1086,9 +1088,6 @@ transition: all 0.4s ease;
 	
 }
 
-.posts .post.style-example{
-	overflow: hidden;
-}
 
 
 .posts .post.style-voice .catch,
@@ -1577,7 +1576,8 @@ text-align: right;
 }
 
 
-.user_info .staff-post{
+.user_info .staff-post,
+.user_info .staff-division{
 line-height: 1.8em;
 color: #B56B31;
 }
@@ -1588,9 +1588,6 @@ line-height: 1.4em;
 font-size: 0.9em;
 }
 
-.user_info .staff-division{
-display: none;
-}
 .user_info .staff-name{
 font-size: 1.1em;
 }
@@ -1619,7 +1616,9 @@ position: relative;
 margin-right: 1em;
 }
 .user_info .userphoto, .user_info .photo {
-width: 100%;
+object-fit: cover;
+  aspect-ratio: 2 / 3;
+  max-height: 300px;
 }
 #staff-inbox .user_info .thumbnail {
 float: left;
@@ -1668,6 +1667,7 @@ left:50%;
 transform: translate(-50%, -50%);
 width: 90%;
 max-width: 800px;
+	border-radius: 0.5rem;
 }
 .user_info .staffpopup .inbox .w100{
 position: relative;
@@ -1711,7 +1711,7 @@ z-index: 400;
 .user_info input[type="checkbox"]:checked + .staffpopup{
 visibility: visible;
 opacity: 1;
-transition:.2s;
+transition:.3s;
 }
 
 .userinfo_detail{
@@ -1963,7 +1963,6 @@ margin-top: 1.5rem;
 margin-bottom: 2rem;
 border-bottom: 1px solid #ccc;
 padding-bottom: 1rem;
-font-family: var(--font_mincho);
 
 }
 .hentry.builder_content .entry-content section:not(#home-reason) h2,
@@ -1972,12 +1971,8 @@ margin-top: 1.5rem;
 margin-bottom: 2rem;
 border-bottom: 1px solid #ccc;
 padding-bottom: 1rem;
-font-family: var(--font_mincho);
 padding-left:clamp(1rem, 0.273rem + 3.64vw, 3rem);
 margin-left:clamp(-3rem, -1 * (0.273rem + 3.64vw), -1rem);
-}
-.hentry.builder_content  .entry-content  h3{
-font-family: var(--font_mincho);
 }
 .hentry.builder_content  .entry-content section:not(#home-reason) h2,
 #main.page-template-htmlpage_about .entry-content h2{
@@ -2529,4 +2524,100 @@ color: #fff;
 }
 
 
+/* ギャラリー全体 */
+/* 共通（ベース） */
+.gallery {
+  display: grid;
+  gap: 16px;
+  margin: 30px 0;
+}
+
+/* カラム数 2〜9 */
+.gallery.gallery-columns-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.gallery.gallery-columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.gallery.gallery-columns-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.gallery.gallery-columns-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.gallery.gallery-columns-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.gallery.gallery-columns-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+.gallery.gallery-columns-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+.gallery.gallery-columns-9 {
+  grid-template-columns: repeat(9, 1fr);
+}
+
+/* 画像 */
+.gallery-item {
+	position: relative;
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* ホバーエフェクト（軽いズーム） */
+.gallery-item:hover img {
+  opacity: 0.8;
+}
+/* ---------------------------------------
+   ギャラリー（slick-slider 以外）にのみ適用
+---------------------------------------- */
+
+/* aタグにクリックを通すため position を指定 */
+.gallery:not(.slick-slider) .gallery-item a {
+  position: relative;
+  z-index: 2; /* 最前面に置く */
+  display: block;
+}
+
+/* 暗転用オーバーレイ（背面へ） */
+.gallery:not(.slick-slider) .gallery-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  transition: background .3s ease;
+  z-index: 1; /* aタグより下にする！ */
+}
+
+/* キャプション（画像の上に表示） */
+.gallery:not(.slick-slider) .gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-shadow: 1px 1px 3px #000;
+
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  color: #fff;
+
+  opacity: 0;
+  transform: translateY(10px);
+
+  transition: opacity .3s ease, transform .3s ease;
+  z-index: 3; /* オーバーレイより上 */
+}
+
+/* ホバー時 */
+.gallery:not(.slick-slider) .gallery-item:hover::before {
+  background: rgba(0,0,0,0.99);
+}
+
+.gallery:not(.slick-slider) .gallery-item:hover .gallery-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
 

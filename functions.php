@@ -58,7 +58,9 @@ function childtheme_get_post_is_in( $partname ) {
       $output = 'video';
     } elseif ( is_tax( 'video_cat' ) ) {
       $output = 'video';
-    } elseif ( $post_cats = wp_get_post_categories( $post->ID ) ) {
+    } 
+	  /*
+	  elseif ( $post_cats = wp_get_post_categories( $post->ID ) ) {
       $post_id = get_the_ID();
       if ( $post_id ) {
         $post_cats = wp_get_post_categories( $post_id );
@@ -68,7 +70,7 @@ function childtheme_get_post_is_in( $partname ) {
         }
       }
     }
-
+*/
     if ( empty( $output ) ) {
       return $partname;
     } else {
@@ -173,61 +175,6 @@ function save_custom_fields( $post_id ) {
         update_post_meta( $post_id, 'slide_target', $_POST[ 'slide_target' ] );
     else delete_post_meta( $post_id, 'slide_target' );
 }
-//LP用投稿タイプ
-register_post_type(
-    'lp', //投稿タイプ名
-    array(
-        'label' => 'LP', //ラベル名
-        'menu_icon' => 'dashicons-megaphone',
-        'labels' => array(
-            'edit_item' => 'LPを編集',
-            'add_new_item' => '新しいLPの追加',
-            'add_new' => '新しいLPの追加',
-            'menu_name' => 'LP' //管理画面のメニュー名
-        ),
-        'public' => true, //公開状態
-        'query_var' => true, // スラッグでURLをリクエストできる
-        'hierarchical' => false, //固定ページのように親ページを指定するならtrue
-        'rewrite' => array( 'slug' => 'lp' ), //スラッグ名
-        'has_archive' => true, //パーマリンクがデフォルト以外、アーカイブページを表示する場合はtrue
-        'supports' => array(
-            'title',
-            'editor',
-            'custom-fields',
-            'thumbnail',
-            'page-attributes',
-            //            'excerpt'
-        )
-    )
-);
-//サンクスページ用投稿タイプ
-register_post_type(
-    'tnx', //投稿タイプ名
-    array(
-        'label' => 'サンクスページ', //ラベル名
-        'menu_icon' => 'dashicons-heart',
-        'labels' => array(
-            'edit_item' => 'サンクスページを編集',
-            'add_new_item' => '新しいサンクスページの追加',
-            'add_new' => '新しいサンクスページの追加',
-            'menu_name' => 'サンクスページ' //管理画面のメニュー名
-        ),
-        'public' => true, //公開状態
-        'query_var' => true, // スラッグでURLをリクエストできる
-        'hierarchical' => false, //固定ページのように親ページを指定するならtrue
-        'rewrite' => array( 'slug' => 'tnx' ), //スラッグ名
-        'has_archive' => true, //パーマリンクがデフォルト以外、アーカイブページを表示する場合はtrue
-        'supports' => array(
-            'title',
-            'editor',
-            'custom-fields',
-            'thumbnail',
-            'page-attributes',
-            //            'excerpt'
-        )
-    )
-);
-
 
 function cptui_register_my_cpts() {
 
@@ -602,35 +549,6 @@ function save_custom_fields2( $post_id ) {
 }
 
 
-// カスタム投稿タイプのサムネイルカラムを追加
-function add_thumbnail_column_to_custom_post_types($columns) {
-    $columns['thumbnail'] = __('サムネイル');
-    return $columns;
-}
-
-// サムネイル画像を表示
-function show_thumbnail_column_in_custom_post_types($column_name, $post_id) {
-    if ($column_name === 'thumbnail') {
-        if (has_post_thumbnail($post_id)) {
-            echo get_the_post_thumbnail($post_id, array(120, 80));
-        } else {
-            echo 'サムネイルなし';
-        }
-    }
-}
-
-// カスタム投稿タイプ一覧にサムネイルを追加するフィルターを適用
-add_filter('manage_voice_posts_columns', 'add_thumbnail_column_to_custom_post_types');
-add_filter('manage_example_posts_columns', 'add_thumbnail_column_to_custom_post_types');
-add_filter('manage_reform_posts_columns', 'add_thumbnail_column_to_custom_post_types');
-
-// カスタム投稿タイプのサムネイルカラムに値を表示
-add_action('manage_voice_posts_custom_column', 'show_thumbnail_column_in_custom_post_types', 10, 2);
-add_action('manage_example_posts_custom_column', 'show_thumbnail_column_in_custom_post_types', 10, 2);
-add_action('manage_reform_posts_custom_column', 'show_thumbnail_column_in_custom_post_types', 10, 2);
-
-
-add_action( 'init', 'cptui_register_my_cpts' );
 function menu_setup() {
     register_nav_menus( array(
         'global-navi' => 'グローバルナビ',
@@ -685,32 +603,48 @@ function is_child( $slug = "" ) {
     }
     endif;
 }
-//管理画面記事一覧でサムネイル表示
 
-add_theme_support( 'post-thumbnails', array( 'post', 'example', 'reform' ) );
-set_post_thumbnail_size( 120, 80, true );
 
-function manage_posts_columns( $columns ) {
-    $columns[ 'thumbnail' ] = __( 'Thumbnail' );
-    return $columns;
-}
 
-function add_column( $column_name, $post_id ) {
 
-    //アイキャッチ取得 array(サイズ,サイズ)
-    if ( 'thumbnail' == $column_name ) {
-        $thum = get_the_post_thumbnail( $post_id, array( 150, 150 ), 'thumbnail' );
+// 投稿タイプのサムネイルカラムを追加
+add_theme_support(
+  'post-thumbnails',
+  array( 'post', 'example', 'reform', 'video' )
+);
+/**
+ * 管理画面：全投稿タイプにサムネイル列を追加
+ */
+add_action( 'admin_init', function() {
+
+    // 画面に表示される投稿タイプを取得（post, page, custom post type）
+    $post_types = get_post_types(
+        array(
+            'show_ui' => true,
+        ),
+        'names'
+    );
+
+    foreach ( $post_types as $post_type ) {
+
+        // カラム追加
+        add_filter( "manage_edit-{$post_type}_columns", function( $columns ) {
+            $columns['thumbnail'] = 'サムネイル';
+            return $columns;
+        });
+
+        // カラム中身
+        add_action( "manage_{$post_type}_posts_custom_column", function( $column, $post_id ) {
+            if ( $column === 'thumbnail' ) {
+                echo has_post_thumbnail( $post_id )
+                    ? get_the_post_thumbnail( $post_id, array( 120, 80 ) )
+                    : 'なし';
+            }
+        }, 10, 2 );
     }
+});
 
-    //使用していない場合「なし」を表示
-    if ( isset( $thum ) && $thum ) {
-        echo $thum;
-    } else {
-        echo __( 'None' );
-    }
-}
-add_filter( 'manage_posts_columns', 'manage_posts_columns' );
-add_action( 'manage_posts_custom_column', 'add_column', 10, 2 );
+
 
 // 文字制御
 add_filter( 'wpcf7_validate_text', 'wpcf7_validate_kana', 11, 2 );
@@ -784,12 +718,6 @@ function shortcode_timelimit( $atts, $content = null ) {
 }
 add_shortcode( 'timelimit', 'shortcode_timelimit' );
 
-// メタボックスの追加
-add_action( 'admin_menu', 'add_css_metabox' );
-
-function add_css_metabox() {
-    add_meta_box( 'custom_css', 'カスタムCSS', 'create_add_css', array( 'post', 'page', 'voice', 'example' ) );
-}
 
 /*admin-styleCSS追加*/
 function custom_editor_settings() {
@@ -952,7 +880,7 @@ add_action( 'edit_user_profile_update', 'update_profile_sample_fields' );
 
 
 //本体ギャラリーCSS停止
-//add_filter( 'use_default_gallery_style', '__return_false' );
+add_filter( 'use_default_gallery_style', '__return_false' );
 
 //yarppのCSSを読み込まない
 

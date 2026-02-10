@@ -21,29 +21,15 @@ $('#home-reform .posts .post.style-example').addClass('col-sm-6 col-md-4');
     ?>
   <div class="posts row justify-content-start pb-4 block">
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-	  
-	  
     <?php if (is_home()||is_front_page()) :?>
     <article class="post-<?php the_ID(); ?> style-example post p-3 linkarea">
-      <picture title="<?php the_title_attribute( array( 'before' => 'リフォーム事例「', 'after' => '」詳細ページへ' ) ); ?>" class="thumbnail">
-      <?php if ( is_new( WHATSNEW_TTL ) ) : ?>
-      <span title="新着" class="tmb-icon new">NEW</span>
-      <?php endif; ?>
-		  
-		  
-		  <span class="attachment">
-		  
-		  
-        <?php
-        if ( function_exists( 'the_post_image' ) ) {
-          if ( the_post_image( array( 400, 400 ) ) === false ) {
-            ?>
-        <span class="noimg"></span>
-        <?php
-        }
-        }
-        ?>
-        </span> </picture>
+      <figure class="post-thumbnail mb-0">
+        <?php if (has_post_thumbnail()) : ?>
+        <?php the_post_thumbnail('medium', ['class' => 'img-fluid', 'alt' => get_the_title()]); ?>
+        <?php else : ?>
+        <span class="noimg" aria-hidden="true"></span>
+        <?php endif; ?>
+      </figure>
       <?php //get_template_part('cat_icon');//カテゴリーアイコン ?>
       <span class="title py-2">
       <?php the_title(); ?>

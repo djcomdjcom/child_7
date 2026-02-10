@@ -36,6 +36,7 @@ $(".slider-wrap")
     slidesToScroll: 1,
     arrows: false,
     speed: 1000,
+	dots:true,
     autoplaySpeed: 4000,
     pauseOnFocus: false,
     pauseOnHover: false,
@@ -55,22 +56,6 @@ $(".slider-wrap")
     },
   });	
 	
-	/*
-	
-    $('.center-item').slick({
-          infinite: true,
-          dots:true,
-		fade: true, // フェードON
-          slidesToShow: 1,
-          centerMode: true, //要素を中央寄せ
-          centerPadding:'0', //両サイドの見えている部分のサイズ
-          autoplay:true, //自動再生
-          autoplaySpeed: 6000, // スライドが動くスピード（ミリ秒）
-          autoplaySpeed: 6000, // スライドが動くスピード（ミリ秒）
-          speed: 1000, // fade時の切り替えのスピード
-          cssEase:'ease'
-     });
-	 */
 });
 
 
@@ -309,7 +294,38 @@ animation: fadezoom2 5s 0s forwards;
   100% { transform:translate(-50%, -50%)  rotate(360deg); }
 }
 
+#slideshow .slick-dots {
+   display: flex;
+   justify-content: center;
+   bottom: 2.4rem;
+   position: relative;
+}
 
+#slideshow .slick-dots li {
+    width: 2.4rem;
+    height: 0;
+    margin: 0 5px;
+    background: #fff;
+    cursor: pointer;
+	padding-top: 1.4rem;
+	opacity: 0.5;
+	transition: .3s;
+}
+
+#slideshow .slick-dots li:hover,
+#slideshow .slick-dots li.slick-active {
+	opacity: 1;
+}
+#slideshow .slick-dots li button {
+    display: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
 </style>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
