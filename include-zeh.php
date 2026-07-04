@@ -17,5 +17,6 @@
 		  <span class="text-nowrap">ZEH普及実績と今後の目標</span></p></div>
     <div class="zeh4 zeh_achievement"> <?php echo wpautop(get_option('profile_zeh_achievement'));?> </div>
   </div>
+<p class="text-center "><a href="https://zehweb.jp/registration/builder/" target="_blank">ＳＩＩ ＺＥＨビルダー プランナー一覧検索</a></p>
 </div>
 <?php endif;?>

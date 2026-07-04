@@ -7,4 +7,27 @@
 body#tinymce{
 	margin-left: 10px;
 	margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#tinymce .gallery .gallery-icon img{
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
+}
+#tinymce .gallery-columns-1 .gallery-item ,
+#tinymce .gallery-columns-2 .gallery-item ,
+#tinymce .gallery-columns-3 .gallery-item ,
+#tinymce .ie8 .gallery-columns-3 .gallery-item,
+#tinymce .ie7 .gallery-columns-3 .gallery-item ,
+#tinymce .gallery-columns-4 .gallery-item ,
+#tinymce .gallery-columns-5 .gallery-item ,
+#tinymce .gallery-columns-6 .gallery-item ,
+#tinymce .gallery-columns-7 .gallery-item ,
+#tinymce .gallery-columns-8 .gallery-item ,
+#tinymce .gallery-columns-9 .gallery-item {
+	width: 100% !important;
+}
+
+#tinymce .wpview.wpview-wrap br[style="clear: both;"]{
+    display: none !important; 
 }

@@ -188,10 +188,19 @@ function quick_edit_video_url_admin_js() {
 add_action('admin_footer', 'quick_edit_video_url_admin_js');
 
 // クイック編集で使う hidden フィールドデータを追加（非表示だがJSで使う）
-function add_video_url_inline_data($post) {
-    if ($post->post_type !== 'video') return;
+function add_video_url_inline_data($column_name, $post_type) {
+
+    if ($column_name !== 'video_url' || $post_type !== 'video') {
+        return;
+    }
+
+    global $post;
+
     $video_url = get_post_meta($post->ID, 'video_url', true);
-    echo '<div class="video_url_inline" style="display:none;">' . esc_html($video_url) . '</div>';
+
+    echo '<div class="video_url_inline" style="display:none;">'
+        . esc_html($video_url)
+        . '</div>';
 }
 add_action('quick_edit_custom_box', 'add_video_url_inline_data', 10, 2);
 add_action( 'init', 'cptui_register_my_cpts' );
