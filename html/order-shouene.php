@@ -56,7 +56,7 @@
   <figure class="w100  mx-auto mb-4 mb-sm-5"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/hems001.webp" alt="HEMSの仕組み"> </figure>
   <h4 class="ttl brackets2 bold mb-3">HEMS（ヘムス）の2大要素</h4>
   <h5 class="ttl numbering bold" ><span class="maru">1</span>エネルギーの見える化</h5>
-  <p class="pl-4 mb-4">住宅にHEMSを設置すると、家庭の電気使用量の数値が最少単位まで見えるようになります。それだけでなく、他のエネルギーであるガスや水道とも連携ができますから、家庭のすべてのエネルギー使用量の数値をいつ・どこで・何に使用しているのかを目で見て確認・把握することができます。 </p>
+  <p class="pl-4 mb-4">住宅にHEMSを設置すると、家庭の電気使用量の数値が最少単位まで見えるようになります。それだけでなく、他のエネルギーであるガスや水道とも連携ができるため、家庭のすべてのエネルギー使用量の数値をいつ・どこで・何に使用しているのかを目で見て確認・把握することができます。 </p>
   <h5 class="ttl numbering bold" ><span class="maru">2</span>エネルギーの一元化（一元管理）</h5>
   <p class="pl-4 mb-4">家の中の電化製品を一括してネットワーク化することにより、自動制御や遠隔操作を可能にし、自動的にエネルギー使用量を最適化することができます。 </p>
   <p class="indent-1 mb-0">★新築住宅で、年間エネルギーをほぼゼロにする住宅(ZEH)にもHEMSは必須です！</p>
@@ -92,7 +92,7 @@
 <section id="dannetsukouzou" class="zeh_point anchor">
   <h2 class="ttl" >断熱構造と性能</h2>
   <h3 class="ttl mb-4">断熱構造</h3>
-  <p> 高性能とパッシブ設計によりいつまでも居心地よ良い暮らしを実現することで、建てたときの満足感が持続します。 </p>
+  <p> 高性能とパッシブ設計によりいつまでも心地よい暮らしを実現することで、建てたときの満足感が持続します。 </p>
   <p> 建物構造が高性能ならば、ライフスタイルに応じて間取りを変更するのは容易ですから、建替えする必要がなく永く住める家づくりになります。 </p>
   <p class="w100  mx-auto"> <img src="<?php bloginfo('stylesheet_directory'); ?>/images/builder/dannetsukouzou001.webp" alt="断熱構造の住宅イメージ"> </p>
   <section id="dannetsuseinou" class="zeh_point anchor">
@@ -247,7 +247,7 @@
   <h5 class="ttl brackets">光熱費が安い</h5>
   <p>少ないエネルギーで効率的にお湯を沸かし、主に夜間の割安な電力を使うため、ガス給湯器を使う場合と比べてランニングコストが割安！<br>
     また、電気エネルギーだけでお湯をわかすのに比べ、消費電力量は約1/3に低減し、とても経済的！</p>
-  <h5 class="ttl brackets">環境にやさしい】</h5>
+  <h5 class="ttl brackets">環境にやさしい</h5>
   <p>空気中の熱という再生可能エネルギーを使い、創エネと省エネを同時に実現できるという独自の特徴！<br>
     <span class="small">※『エコキュート』が採用している自然冷媒は、従来のフロン系冷媒と違い、オゾン層にダメージを与えず、地球温暖化係数もフロン系の約1,700分の1。</span></p>
   <h5 class="ttl brackets">学習機能</h5>

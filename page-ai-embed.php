@@ -9,6 +9,8 @@ if ( have_posts() ) {
 	the_post();
 }
 
+$ai_embed_before = (string) get_post_meta( get_the_ID(), '_hublog7_ai_embed_before', true );
+$ai_embed_after  = (string) get_post_meta( get_the_ID(), '_hublog7_ai_embed_after', true );
 $ai_embed_source = (string) get_post_field( 'post_content', get_the_ID(), 'raw' );
 $ai_embed_iframe_id = 'hublog7-ai-embed-' . get_the_ID();
 
@@ -181,6 +183,12 @@ if ( preg_match( '/<html[\s>]/i', $ai_embed_source ) || preg_match( '/<!doctype/
 <?php get_header(); ?>
 
 <main id="hublog7-ai-embed-page" class="hublog7-ai-embed-page">
+	<?php if ( trim( $ai_embed_before ) !== '' ) : ?>
+		<section class="hublog7-ai-embed-content hublog7-ai-embed-content-before">
+			<?php echo apply_filters( 'the_content', $ai_embed_before ); ?>
+		</section>
+	<?php endif; ?>
+
 	<iframe
 		id="<?php echo esc_attr( $ai_embed_iframe_id ); ?>"
 		class="hublog7-ai-embed-frame"
@@ -190,6 +198,12 @@ if ( preg_match( '/<html[\s>]/i', $ai_embed_source ) || preg_match( '/<!doctype/
 		loading="eager"
 		referrerpolicy="no-referrer"
 	></iframe>
+
+	<?php if ( trim( $ai_embed_after ) !== '' ) : ?>
+		<section class="hublog7-ai-embed-content hublog7-ai-embed-content-after">
+			<?php echo apply_filters( 'the_content', $ai_embed_after ); ?>
+		</section>
+	<?php endif; ?>
 </main>
 
 <style>
@@ -198,6 +212,16 @@ if ( preg_match( '/<html[\s>]/i', $ai_embed_source ) || preg_match( '/<!doctype/
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+}
+
+.hublog7-ai-embed-content {
+	width: min(1100px, calc(100% - 32px));
+	margin: 0 auto;
+	padding: 40px 0;
+}
+
+.hublog7-ai-embed-content:empty {
+	display: none;
 }
 
 .hublog7-ai-embed-frame {
