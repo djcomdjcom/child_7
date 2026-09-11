@@ -23,7 +23,7 @@ $('#home-reform .posts .post.style-example').addClass('col-sm-6 col-md-4');
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
     <?php if (is_home()||is_front_page()) :?>
     <article class="post-<?php the_ID(); ?> style-example post p-3 linkarea">
-      <figure class="post-thumbnail mb-0">
+      <figure class="post-thumbnail">
         <?php if (has_post_thumbnail()) : ?>
         <?php the_post_thumbnail('medium', ['class' => 'img-fluid', 'alt' => get_the_title()]); ?>
         <?php else : ?>
@@ -31,7 +31,7 @@ $('#home-reform .posts .post.style-example').addClass('col-sm-6 col-md-4');
         <?php endif; ?>
       </figure>
       <?php //get_template_part('cat_icon');//カテゴリーアイコン ?>
-      <span class="title py-2">
+      <span class="title pb-3">
       <?php the_title(); ?>
       </span>
       <?php if(post_custom('catchcopy')) :?>

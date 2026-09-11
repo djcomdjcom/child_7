@@ -132,81 +132,83 @@ jQuery(function($){
 </script>
 
 <div class="slick-slider hublogslider" id="slideshow">
-  <div class="center-item slider-wrap slick posts">
-
-    <?php
-    global $post;
-
-    $my_posts = get_posts( array(
-      'post_type'      => 'slideimage',
-      'posts_per_page' => 5,
-      'orderby'        => 'date',
-      'order'          => 'ASC'
-    ) );
-
-    $slide_count = 0;
-
-    foreach ( $my_posts as $post ) :
-      setup_postdata( $post );
-      $slide_count++;
-
-      $post_title   = get_the_title();
-      $slide_url    = post_custom( 'slide_url' );
-      $slide_target = get_post_meta( get_the_ID(), 'slide_target', true );
-
-      $img_attr = array(
-        'alt'      => $post_title,
-        'title'    => $post_title,
-        'sizes'    => '100vw',
-        'decoding' => 'async',
-        'class'    => 'wp-post-image'
-      );
-
-      // 1枚目は優先読み込み + Lazy Load除外
-      if ( $slide_count === 1 ) {
-        $img_attr['loading']       = 'eager';
-        $img_attr['fetchpriority'] = 'high';
-        $img_attr['decoding']      = 'sync';
-        $img_attr['class']        .= ' skip-lazy no-lazy';
-        $img_attr['data-no-lazy']  = '1';
-      } else {
-        $img_attr['loading']       = 'lazy';
-        $img_attr['fetchpriority'] = 'low';
-      }
-    ?>
-
-      <?php if ( $slide_url ) : ?>
-        <a class="post slide-attachment" href="<?php echo esc_url( $slide_url ); ?>" title="<?php echo esc_attr( $post_title ); ?>"<?php if ( $slide_target == 1 ) : ?> target="_blank" rel="noopener"<?php endif; ?>>
-      <?php else : ?>
-        <span class="post slide-attachment" title="<?php echo esc_attr( $post_title ); ?>">
-      <?php endif; ?>
-
+    <div class="center-item slider-wrap posts">
         <?php
-        if ( has_post_thumbnail() ) {
-          the_post_thumbnail( 'full', $img_attr );
+        global $post;
+
+        $my_posts = get_posts( array(
+            'post_type' => 'slideimage',
+            'posts_per_page' => 5,
+            'orderby' => 'date',
+            'order' => 'ASC'
+        ) );
+
+        if ( empty( $my_posts ) ) {
+            return;
+        }
+
+
+        $slide_count = 0;
+
+        foreach ( $my_posts as $post ):
+            setup_postdata( $post );
+        $slide_count++;
+
+        $post_title = get_the_title();
+        $slide_url = post_custom( 'slide_url' );
+        $slide_target = get_post_meta( get_the_ID(), 'slide_target', true );
+
+        $img_attr = array(
+            'alt' => $post_title,
+            'title' => $post_title,
+            /*
+             * スマホ縦画面では object-fit: cover により画像が高さ基準で拡大されます。
+             * sizes="100vw" のままだとブラウザが小さめの srcset 画像を選びやすく、
+             * ヒーロー表示時に引き伸ばされてぼやけるため、スマホ時は実描画幅に近い値を指定します。
+             */
+            'sizes' => '(max-width: 767px) 150vh, 100vw'
+        );
+
+        // 1枚目は優先読み込み、2枚目以降は遅延読み込み
+        if ( $slide_count === 1 ) {
+            $img_attr[ 'loading' ] = 'eager';
+            $img_attr[ 'fetchpriority' ] = 'high';
+        } else {
+            $img_attr[ 'loading' ] = 'lazy';
+            $img_attr[ 'fetchpriority' ] = 'low';
         }
         ?>
-
-        <?php if ( post_custom( 'slideimage_filter_css' ) ) : ?>
-          <span class="color_filter" style="<?php echo esc_attr( SCF::get( 'slideimage_filter_css' ) ); ?>"></span>
+        <?php if ( $slide_url ) : ?>
+        <a class="post slide-attachment" href="<?php echo esc_url( $slide_url ); ?>" title="<?php echo esc_attr( $post_title ); ?>"<?php if ( $slide_target == 1 ) : ?> target="_blank" rel="noopener"<?php endif; ?>>
+        <?php else : ?>
+        <span class="post slide-attachment" title="<?php echo esc_attr( $post_title ); ?>">
         <?php endif; ?>
-
+        <?php
+        /*
+         * スライダー専用サイズを使いつつ、sizes属性でブラウザのsrcset選択を調整します。
+         * さらに荒さが残る場合は、functions.php側でスマホ専用/高解像度の画像サイズ追加を検討します。
+         */
+        if ( has_post_thumbnail() ) {
+            the_post_thumbnail( 'larhublog_slider_pcge', $img_attr );
+        }
+        ?>
+        <?php if ( post_custom( 'slideimage_filter_css' ) ) : ?>
+        <span class="color_filter" style="<?php echo esc_attr( SCF::get( 'slideimage_filter_css' ) ); ?>"></span>
+        <?php endif; ?>
         <div class="slide-text">
-          <div class="d-none slide-text_title mincho"><?php the_title(); ?></div>
-          <?php the_content(); ?>
+            <div class="slide-text_title mincho">
+                <?php the_title(); ?>
+            </div>
+            <?php the_content(); ?>
         </div>
-
-      <?php if ( $slide_url ) : ?>
+        <?php if ( $slide_url ) : ?>
         </a>
-      <?php else : ?>
+        <?php else : ?>
         </span>
-      <?php endif; ?>
-
-    <?php endforeach; ?>
-    <?php wp_reset_postdata(); ?>
-
-  </div>
-</div>
+        <?php endif; ?>
+        <?php endforeach; ?>
+        <?php wp_reset_postdata(); ?>
+    </div></div>
 
 <?php if ( is_user_logged_in() ) : ?>
   <div class="edit_slider billboard">
@@ -228,6 +230,7 @@ jQuery(function($){
   position: relative;
   background: #f7f5f2;
   overflow: hidden;
+    height: 70vh;
 }
 
 #home-slider .edit_slider.billboard {
@@ -273,6 +276,8 @@ jQuery(function($){
   opacity: 0;
   transition: opacity 1.2s ease;
   will-change: opacity;
+    axpect-raito:1 / 5;
+    height: inherit !important;
 }
 
 /* 表示中のスライド画像だけフェード表示 */
@@ -328,29 +333,12 @@ jQuery(function($){
   z-index: 1;
 }
 
-/* テキスト */
-.post.slide-attachment .slide-text{
-position: absolute;
-max-width: 1280px !important;
-left:calc(50vw - 50% );
-bottom: 10%;
-right:0;
-color: #fff;
-text-shadow: 0 0 0.5em rgba(0,0,0,0.80);
-width: 100vw;
-/*	transform: translateY( -50%);*/
-}
-.post.slide-attachment .slide-text{
-padding: 1em 2em;
-font-size: clamp(1.063rem, 0.583rem + 2.4vw, 2.5rem);
 
-}
 
 /* 表示中スライドのテキストをフェードイン */
 #slideshow.is-image-fadein .slick-current .slide-text,
 #slideshow.is-image-fadein .slick-current.post.slide-attachment .slide-text {
   opacity: 1;
-  transform: translateY(0);
 }
 
 
@@ -410,12 +398,12 @@ position: relative;
 position: absolute;
 max-width: 1280px !important;
 left:calc(50vw - 50% );
-bottom: 10%;
+top: 50%;
 right:0;
 color: #fff;
-text-shadow: 0 0 0.5em rgba(0,0,0,0.80);
+text-shadow: 0 0 0.3em rgba(0,0,0,0.90);
 width: 100vw;
-/*	transform: translateY( -50%);*/
+transform: translateY( calc(-50% - 1em));
 }
 .post.slide-attachment .slide-text{
 padding: 1em 2em;
@@ -442,8 +430,8 @@ height: 70vh;
 @media screen and (max-width: 767.98px) {
 	
 .post.slide-attachment .slide-text{
-top: 50%;
-transform: translateY(-50%);
+top: 0;
+transform: translateY(0);
 right:0;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
@@ -453,7 +441,6 @@ right:0;
 	font-size: 3vh;
 /*	text-align: center;*/
 }
-	.post.slide-attachment .slide-text p{}
 	
 }
 </style>

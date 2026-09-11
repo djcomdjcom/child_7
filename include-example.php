@@ -68,7 +68,7 @@ jQuery(function($){
     <picture class="thumbnail w100 m-0">
       <?php
       if ( function_exists( 'the_post_image' ) ) {
-        if ( the_post_image( array( 480, 480, true ) ) === false ) {
+        if ( the_post_image( array( 1280, 640, true ) ) === false ) {
           ?>
       <span class="noimg"></span>
       <?php

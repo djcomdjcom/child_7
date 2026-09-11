@@ -133,7 +133,7 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
 
 <!--▼▼▼インフォエリア▼▼▼-->
 <div id="home-infoarea" class=" wrapper container mx-auto px-0 mb-5 ">
-  <section id="home-news" class="home-content pt-5 pb-4 mb-4 mb-md-5 px-0 px-md-3 mx-auto">
+  <section id="home-news" class="home-content py-5 mb-4 mb-md-5 px-0 px-md-3 mx-auto">
     <header class="content_header text-sm-center mb-3 mb-md-4 maxw-1000 mx-auto">
       <h2 class="ttl ">ニュース<span class="txt-s">＆</span>トピックス</h2>
       <a class="to_index" href="/category/news" title="ニュース＆トピックス一覧ページヘのリンク">一覧</a> </header>
@@ -236,11 +236,13 @@ $('.posts .post.style-voice').addClass('col-12 col-sm-6 col-lg-4');
           ?>
         </figure>
         <div class="col-md-7 align-self-center order-md-1">
-          <p class="txt-lll  lh-25">ただの建物を作るだけでなく<br>
+          <div class="px-md-4">
+          <p class="txt-ll  lh-25">ただの建物を作るだけでなく<br>
             お客様一人ひとりの想いを形にし<br>
             心から満足いただける住まいをご提供することを<br>
             使命としております。</p>
           <p class="btn arrow pill"><a class="col_bg_key05" href="/about">続きを読む</a></p>
+          </div>
         </div>
       </div>
     </section>
