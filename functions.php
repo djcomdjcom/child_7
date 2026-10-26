@@ -647,21 +647,26 @@ add_action( 'admin_init', function() {
 
 
 // 文字制御
-add_filter( 'wpcf7_validate_text', 'wpcf7_validate_kana', 11, 2 );
-add_filter( 'wpcf7_validate_text*', 'wpcf7_validate_kana', 11, 2 );
+add_filter('wpcf7_validate_text',  'wpcf7_validate_kana', 11, 2);
+add_filter('wpcf7_validate_text*', 'wpcf7_validate_kana', 11, 2);
 
-function wpcf7_validate_kana( $result, $tag ) {
-    $tag = new WPCF7_Shortcode( $tag );
+function wpcf7_validate_kana($result, $tag) {
+
     $name = $tag->name;
-    $value = isset( $_POST[ $name ] ) ? trim( wp_unslash( strtr( ( string )$_POST[ $name ], "\n", " " ) ) ) : "";
+
+    $value = isset($_POST[$name])
+        ? trim(wp_unslash(strtr((string) $_POST[$name], "\n", " ")))
+        : "";
 
     // 'c-kana' または 'kana' の場合
-    if ( $name === "c-kana" || $name === "kana" ) {
-        // ひらがな以外だった場合
-        if ( !preg_match( "/^[ぁ-ゞー]+$/u", $value ) ) {
-            $result->invalidate( $tag, "全角ひらがなで入力してください。" );
+    if ($name === 'c-kana' || $name === 'kana') {
+
+        // 空欄は required 側の検証に任せる
+        if ($value !== '' && !preg_match('/^[ぁ-ゞー]+$/u', $value)) {
+            $result->invalidate($tag, '全角ひらがなで入力してください。');
         }
     }
+
     return $result;
 }
 
@@ -763,56 +768,7 @@ function stop_comment_reply_js_queue() {
 }
 add_action( 'wp_footer', 'stop_comment_reply_js_queue' );
 
-
-// プロフィールに任意のフィールドを追加するサンプル
-function add_profile_sample_fields( $user ) {
-    ?>
-<div style="background: #fff; padding: 1em;">
-<h2>
-  <?php _e( 'スタッフ紹介ページ表示項目（上位版）' ); ?>
-</h2>
-<table class="form-table">
-  <tr>
-    <th><label for="message">
-        <?php _e( '「メッセージ」「こんな人」' ); ?>
-      </label>
-      <br>
-      <small>プロフィールページのヘッダ見出し</small></th>
-    <td><textarea name="message" id="message" cols="30" rows="5" placeholder="<?php _e( '（例）&#13;自分自身が働く喜びを感じながら、&#13;“働く喜び”が感じられる人と家を&#13;つくりたい' ); ?>"><?php echo esc_attr( get_the_author_meta( 'message', $user->ID ) ); ?></textarea></td>
-  </tr>
-  <tr>
-    <th><label for="skills">
-        <?php _e( 'スキル・できること' ); ?>
-      </label>
-      <br>
-      <small>項目ごとに改行</small></th>
-    <td><textarea name="skills" id="skills" cols="30" rows="5" placeholder="<?php _e( '（例）&#13;建築設計&#13;商品開発&#13;建築コンサルティング' ); ?>"><?php echo esc_attr( get_the_author_meta( 'skills', $user->ID ) ); ?></textarea></td>
-  </tr>
-  <tr>
-    <th><label for="credentials">
-        <?php _e( '所有資格' ); ?>
-      </label>
-      <br>
-      <small>項目ごとに改行</small></th>
-    <td><textarea name="credentials" id="credentials" cols="30" rows="5" placeholder="<?php _e( '（例）&#13;一級建築士&#13;１級建築施工管理技士&#13;宅地建物取引士' ); ?>"><?php echo esc_attr( get_the_author_meta( 'credentials', $user->ID ) ); ?></textarea></td>
-  </tr>
-  <tr>
-    <th><label for="text-sample">
-        <?php _e( 'テキスト' ); ?>
-      </label></th>
-    <td><input type="text" name="text-sample" id="text-sample" value="<?php echo esc_attr( get_the_author_meta( 'text-sample', $user->ID ) ); ?>" class="regular-text" placeholder="<?php _e( 'テキストフィールドのサンプル' ); ?>" /></td>
-  </tr>
-  <tr>
-    <th><label for="select-sample">
-        <?php _e('セレクト' ); ?>
-      </label></th>
-    <td><select name="select-sample" id="select-sample">
-        <option value="">選択</option>
-        <option value="A" <?php selected( get_user_meta( $user->ID, 'select-sample', true ), 'A' ); ?>>A</option>
-        <option value="B" <?php selected( get_user_meta( $user->ID, 'select-sample', true ), 'B' ); ?>>B</option>
-        <option value="C" <?php selected( get_user_meta( $user->ID, 'select-sample', true ), 'C' ); ?>>C</option>
-      </select></td>
-  </tr>
+kana
   <tr>
     <th><?php _e( 'チェックボックス' ); ?></th>
     <td><label>
